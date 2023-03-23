@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	
+		<style>
+		
+			<!--
+			.end_public a:hover img {
+				transform:rotate(45deg);
+				transition-duration:1s;
+			}
+			-->
+			
+			
+			.rotate img:hover{
+				animation: rotation 4s infinite linear;
+			}
+			
+			@keyframes rotation {
+				0% {
+					transform: rotate(-30deg);
+				}
+				33% {
+					transform: rotate(30deg);
+				}
+				66% {
+					transform: rotate(30deg);
+				}
+				100% {
+					transform: rotate(-30deg);
+				}
+			}
+			
+		
+		</style>
+	
+	</head>
+	<body>
+		<table height="100%" width="100%">
+			<tr>
+				<td>
+					<!-- TITLE ZONE -->
+					MANOLO 1
+				</td>
+				<td>
+					<!-- MENU ZONE -->					
+					<figure class="rotate">
+						<img src="./tonyMask.png" height="50", width="50">
+					</figure>
+				</td>
+				<td>
+					<!-- ABOUT ZONE -->
+					Manolo 3
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- Quick ACCESS ZONE -->
+					Manolo 4
+				</td>
+				<td>
+					<!-- MAIN IFRAME ZONE -->
+					Manolo 5
+				</td>
+				<td height="60px">
+					<!-- COPYRIGHT ZONE -->
+					Manolo 6
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,251 @@
+﻿*{
+	box-sizing:border-box;
+}
+
+html{
+	margin:0;
+	padding:9;
+	height:100%;
+	background-color:#FFF;
+}
+
+body{
+	margin:0 auto;
+	/*width:960px;*/
+	min-width: 100vw;
+	min-height: 100vh;
+	background-color:#FFFFCC;
+}
+
+/* The sidebar menu */
+.sidebar {
+  height: 95vh; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: relative; /* Stay in place */
+  z-index: 2; /* Stay on top */
+  top: 5vh;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+}
+
+.openbtn:hover {
+	background-color: #444;
+}
+
+.musicbtn{
+	font-size: 20px;
+	position:fixed;
+	bottom:1vh;
+	right:0.5vh;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+}
+
+.sbsubmenu {
+	/*width:85vw;*/
+	height: 45px auto;
+	margin: auto;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-top: 10px;
+	background-color:gray;
+	font-size: 20px;
+	font-family: hmiamifont;
+	font-color:black;
+}
+
+.togglesm {
+	position: fixed;
+	background-color:rgb(255,255,255,0);
+	border:0;
+	margin:0;
+	padding:0;
+	/*right:10vh;*/
+}
+
+@font-face {
+	font-family: hmiamifont; 
+	src: url('../fonts/justiceout.ttf');
+}
+
+#sbSmDiv {
+	font-family: hmiamifont; 
+	color: blue;
+	font-size: 35px;
+	display: none;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+  position:fixed;
+  top: 5vh;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+} 
+
+#myMainFrame {
+	height:90vh;
+	width:95vw;
+	position:absolute;
+	z-index: 1;
+	top:5vh;
+	bottom:5vh;
+	right:0;
+	overflow-x:hidden;
+	font-size: 25px;
+	font-family: hmiamifont;
+}
+
+#myTopbar {
+	height:5vh;
+	width:100vw;
+	position:absolute;
+	z-index: 1;
+	top:0;
+	left:0;
+	background-color:#111;
+	overflow-x:hidden;
+}
+
+#tittlebar {
+	position:absolute;
+	top:0px;
+	right:0px;
+	background-color:green;
+	height:5vh;
+	width:75vw;
+}
+
+#copyright {
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	background-color:green;
+	height:5vh;
+	width:75vw;
+}
+
+#mainframe{
+	position:absolute;
+	top:5vh;
+	bottom:5vh;
+	left:25vh;
+	background-color:yellow;
+	height:90vh;
+	width:75vw;
+}
+
+#musicbutton {
+position:absolute;
+	top:5vh;
+	bottom:10vh;
+	left:25vh;
+	background-color:yellow;
+	height:90vh;
+	width:75vw;
+}
+
+@media only screen and (min‐width:960px){
+	/* styles for browsers larger than 960px; */
+	body{
+		margin:0 auto;
+		width:960px;
+		height:100vh;
+		background-color:#FFFFCC;
+	}
+}
+@media only screen and (min‐width:1440px){
+	/* styles for browsers larger than 1440px; */
+	body{
+		margin:0 auto;
+		width:1440px;
+		height:100vh;
+		background-color:#FFFFCC;
+	}
+}
+
+@media only screen and (min‐width:1920px){
+	/* styles for browsers larger than 1920px; */
+	body{
+		margin:0 auto;
+		width:1920px;
+		height:100vh;
+		background-color:#FFFFCC;
+	}
+}
+
+@media only screen and (min‐width:2000px){
+	/* for sumo sized (mac) screens */
+}
+@media only screen and (max‐device‐width:480px){
+	/* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device‐width:768px){
+	/* default iPad screens */
+}
+
+/* different techniques for iPad screening */
+@media only screen and (min‐device‐width: 481px) and (max‐device‐width: 1024px) and (orientation:portrait) {
+	/* For portrait layouts only */
+}
+
+
+@media only screen and (min‐device‐width: 481px) and (max‐device‐width: 1024px) and (orientation:landscape) {
+	/* For landscape layouts only */
+}
+
+@media only screen and (min‐device‐width: 1441px) and (max‐device‐width: 1920px) and (orientation:landscape) {
+	/* For landscape layouts only */
+	body{
+		margin:0 auto;
+		width:1920px;
+		height:100vh;
+		background-color:#FFFFCC;
+	}
+}
