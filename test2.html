@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+
+	<style type="text/css">
+		html, body, div{ 
+            margin:0 auto;
+			box-sizing: border-box;
+        }
+
+		.header {
+			height:10%;
+			border: 1px solid red;
+			padding:15px;
+		}
+
+		.menu {
+			width:15%;
+			float:left;
+			border: 1px solid red;
+			padding:15px;
+		}
+
+		.main {
+			width:78%;
+			float:left;
+			border: 1px solid red;
+			padding:15px;
+		}
+
+		.row::after{
+			content:"";
+			clear:both;
+			display: table;
+		}
+
+		[class*="col-"] {
+			float :left;
+			padding:15px;
+			border: 1px solid red;
+		}
+
+		.col-1	{width:8.33%}
+		.col-2	{width:16.66%}
+		.col-3	{width:25%}
+		.col-4	{width:33.33%}
+		.col-5	{width:41.66%}
+		.col-6	{width:50%}
+		.col-7	{width:58.33%}
+		.col-8	{width:66.66%}
+		.col-9	{width:75%}
+		.col-10 {width:83.33%}
+		.col-11 {width:91.66%}
+		.col-12 {width:100%}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>Tittle</h1>
+	</div>
+	<div class="row">
+		<div class="col-3">
+			<ul>
+				<li>Opt 1</li>
+				<li>Opt 2</li>
+				<li>Opt 3</li>
+				<li>Opt 4</li>
+			</ul>
+		</div>
+		<div class="col-9">
+			<h1>Content</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin elementum nulla ipsum, vel laoreet neque sollicitudin sed. 
+				Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
+				Fusce molestie, velit vitae ultricies laoreet, orci magna congue metus, eget suscipit velit massa eu elit.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

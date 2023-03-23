@@ -69,6 +69,13 @@ body{
 	background-color: #444;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: header header header header header;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
 .musicbtn{
 	font-size: 20px;
 	position:fixed;
@@ -182,7 +189,7 @@ body{
 }
 
 #musicbutton {
-position:absolute;
+	position:absolute;
 	top:5vh;
 	bottom:10vh;
 	left:25vh;
