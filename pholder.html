@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>HMiamiWiki</title>
+	<link rel="icon" type="image/x-icon" href="./img/tonyMask.png">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="F.Javier Gimeno Ortiz">
 	<meta name="owner" content="F.Javier Gimeno Ortiz">
+	<meta name="description" content="Hotline Miami Fan Wiki">
+	<meta name="keywords" content="wiki, hotline miami, fan project">
+
+	<meta http-equiv="Access-Control-Allow-Origin">
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
 
 	<style type="text/css">
+		Access-Control-Allow-Origin: *
 		html, body, div{ 
             margin:0 auto;
 			padding:0;
@@ -97,8 +105,15 @@
 		.col-14 {width:20%}
 		.col-15 {width:80%}
 		.col-16 {width:95%}
-
 	</style>
+
+	<script>
+		$(window).on('scroll', function() {
+			var scroll = $(window).scrollTop();
+			window.postMessage(scroll, "gimenoor.github.io");
+			//window.parent.ToggleHeader($(window).scrollTop());
+		});
+	</script>
 </head>
 <body>
 	<div class="main">

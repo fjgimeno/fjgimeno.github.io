@@ -9,10 +9,17 @@
 	<meta name="owner" content="F.Javier Gimeno Ortiz">
 	<meta name="description" content="Hotline Miami Fan Wiki">
 	<meta name="keywords" content="wiki, hotline miami, fan project">
+
+	<meta http-equiv="Access-Control-Allow-Origin">
 	<!--<link rel="stylesheet" href="./css/main.css">-->
+	
+	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+
 
 	<style type="text/css">
 		html, body, div{ 
+			height:auto%;
             margin:0 auto;
 			box-sizing: border-box;
 			background-color:#330000FF;
@@ -46,13 +53,17 @@
 			height: 100%;
 			left:0;
 
+			background-image: linear-gradient(to bottom, #c6c500, #cbb100, #cc9c00, #ca8800, #c6750d);
+
+			/*
 			background: #B74EFF;
 			background: -moz-linear-gradient(top, #B74EFF 0%, #C513B6 100%);
 			background: -webkit-linear-gradient(top, #B74EFF 0%, #C513B6 100%);
 			background: linear-gradient(to bottom, #B74EFF 0%, #C513B6 100%);
+			*/
 
-			-webkit-box-shadow: 0px 0px 15px 0 px #000000; 
-			box-shadow: 0px 0px 15px 0px #000000;
+			-webkit-box-shadow: 0px 0px 15px 0 px #000000FF; 
+			box-shadow: 0px 0px 15px 0px #000000FF;
 
 			border-right: 1px solid #660000FF;
 		}
@@ -66,20 +77,6 @@
 			padding:0;
 		}
 
-		/*
-		.footer {
-			position:absolute;
-			background-color:#330000FF;
-			border-top:#660000FF;
-			color:white;
-			height:45px;
-			bottom:0;
-			right:0;
-			text-align:center;
-			vertical-align:center;
-		}
-		*/
-
 		.row::after{
 			content:"";
 			clear:both;
@@ -88,8 +85,6 @@
 
 		[class*="col-"] {
 			float :left;
-			/*padding:15px;*/
-			/*border: 1px solid red;*/
 		}
 
 		.col-0 {width:5%}
@@ -110,98 +105,41 @@
 		.col-15 {width:80%}
 		.col-16 {width:95%}
 
+		.fil-0 {height:5%}
+		.fil-1	{height:8.33%}
+		.fil-2	{height:16.66%}
+		.fil-3 {height:20%}
+		.fil-4	{height:25%}
+		.fil-5	{height:33.33%}
+		.fil-6	{height:41.66%}
+		.fil-7	{height:50%}
+		.fil-8	{height:58.33%}
+		.fil-9	{height:66.66%}
+		.fil-10	{height:75%}
+		.fil-11 {height:83.33%}
+		.fil-12 {height:91.66%}
+		.fil-13 {height:100%}
+		.fil-14 {height:20%}
+		.fil-15 {height:80%}
+		.fil-16 {height:95%}
+
 	</style>
 </head>
 <body>
-	<!--<script src="js/main.js"></script> -->
-
 	<div class="main">
-		<div class="header col-16">
-			<!--<h2>HEADER PLACEHOLDER</h2>-->
-			<img class="main_logo" src="img/logo1.webp" alt="Logo 1"> </img>
+		<div id="Header" class="header col-16">
+			<img class="main_logo" src="img/logo1.webp" alt="Logo 1" onclick="ToggleHeader(this)"> </img>
 		</div>
 
 		<div class="sidebar col-0">
 			
 		</div>
 
-		<div class="content col-16">
-			<!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oKD-MVfC9Ag" title="Hotline Mami OST" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
-			 <iframe width="100%" height="100%" src="pholder.html"></iframe>
-		</div>
-	</div>
-	<!--
-	<div id="myMainFrame" class="mainframe">
-		<p width="50vw">
-			<img src="#" height="250px" width="250px" style="float:left;">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis eros sed magna pretium sollicitudin in malesuada dolor. 
-			Vestibulum eu ullamcorper tellus. Aenean mattis ullamcorper massa in venenatis. Vestibulum sed urna ac massa blandit cursus. 
-			Donec vel malesuada dui. Aenean sit amet efficitur felis. Phasellus mollis felis libero, eget interdum est pharetra nec. 
-			Praesent non ipsum id est pharetra rutrum at in nulla. Nam sodales suscipit ex placerat porta. 
-		</p>
-		<p>
-			<img src="#" height="250px" width="250px" style="float:left;">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis eros sed magna pretium sollicitudin in malesuada dolor. 
-			Vestibulum eu ullamcorper tellus. Aenean mattis ullamcorper massa in venenatis. Vestibulum sed urna ac massa blandit cursus. 
-			Donec vel malesuada dui. Aenean sit amet efficitur felis. Phasellus mollis felis libero, eget interdum est pharetra nec. 
-			Praesent non ipsum id est pharetra rutrum at in nulla. Nam sodales suscipit ex placerat porta. 
-		</p>
+		<div id ="Content" class="content col-16"></div>
 	</div>
 
-	<div id="mySidebar" class="sidebar">
-		<img id="logo" src="./img/logo.npg" height="100px" width="240px"></img>
-		
-		<div id="mySidebarSubmenu" class="sbsubmenu">
-			<div id="sbSMEntry" class="sbsmentry">
-				<button id="myMSKToggleSM" class="togglesm" onclick="toggleSM(this.parentElement.parentElement)"><img src="img/buttons/characters.png" width="190px"></button>
-			</div>
-			<div id="sbSmDiv" class="sbsmdiv">
-				<img src="img/pholder.png" width="50px" height="50px" alt="Richard mask"/>
-				Richard
-			</div>
-			<br/>
-			<div id="sbSmDiv" class="sbsmdiv">
-				<img src="img/pholder.png" width="50px" height="50px" alt="Rasmus mask"/>
-				Rasmus
-			</div>
-			<br/>
-			<div id="sbSmDiv" class="sbsmdiv">
-				<img src="img/pholder.png" width="50px" height="50px" alt="Tony mask"/>
-				Tony
-			</div>
-			<br/>
-		</div>
-		
-
-		<div id="mySidebarSubmenu" class="sbsubmenu">
-			<div id="sbSMEntry" class="sbsmentry">
-				Items
-				<button id="myMSKToggleSM" class="togglesm" onclick="toggleSM(this.parentElement.parentElement)">&#8964;</button>
-			</div>
-			<div id="sbSmDiv" class="sbsmdiv">
-				<img src="img/pholder.png" width="50px" height="50px" alt="Richard mask"/>
-				Richard
-			</div>
-			<br/>
-			<br/>
-		</div>
-		<a href="#">About</a>
-		<a href="#">Developer</a>
-	</div>
-	
-
-	<div id="myTopbar" class="topbar">
-		
-	</div>
-
-	<div id="main">
-		<button class="openbtn" onclick="toggleNav()">&#9776;</button>
-		<button class="musicbtn" onclick="">&#9658;</button>
-	</div>
-	-->
-<!-- 
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/4uj6bJgjBtW7r91ognROc7?utm_source=generator&theme=0" 
-width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
--->
+	<script language="JavaScript">
+		document.getElementById("Content").innerHTML='<object class="mainframe content col-13 fil-13" type="text/html" data="pholder.html" ></object>';
+	</script>
 </body>
 </html>

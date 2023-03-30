@@ -1,4 +1,50 @@
+{
+	var hideHeader;
+	var lastScrollTop = 0;
+}
+
+/*
+$("iframe").ready().bind('scroll', function () 
+{
+		console.log("Manolo\n");
+});
+
+
+
+$(document).ready(function() 
+	{
+		console.log($("iFrame").scrollX + ", " + $("iFrame").scrollY);
+	}
+);
+*/
+
+window.addEventListener (
+	"message",
+	(event) => {
+		// Do we trust the sender of this message?  (might be
+		// different from what we originally opened, for example).
+		if (event.origin !== "gimenoor.github.io") return;
+		else console.log("Message received\n");
+	},
+	false
+);
+
+function ToggleHeader(posy) {
+	if(posy >= 10)
+	{
+		headerElem.toggle(true);
+	}
+	else 
+	{
+		headerElem.toggle(false);
+	}
+}
+
+
+
+
 /* Global Vars */
+/*
 {
 	var toggleNavB = false;
 	var toggleCHSMB = false
@@ -17,8 +63,9 @@ function closeNav() {
 		document.getElementById("main").style.marginLeft = "0";
 		document.getElementById("myMainFrame").style.width = "95vw";
 }
-
+*/
 /* Toggles the navigation bar */
+/*
 function toggleNav() {
 	if(!toggleNavB){
 		openNav();
@@ -27,8 +74,9 @@ function toggleNav() {
 		closeNav();
 	}
 }
-
+*/
 /* Toggles CH Submenu */
+/*
 function toggleSM(element) {
 	if(element != null){
 		console.log("ID: " + element.id);
@@ -36,7 +84,7 @@ function toggleSM(element) {
 	var childs = element.getElementsByClassName('sbsmdiv');
 	var child;
 	var count = 0;
-	/**/
+	
 	do{
 		child = childs[count];
 		if(child != null){
@@ -47,5 +95,6 @@ function toggleSM(element) {
 		}
 		count += 1;
 	}while(child != null)
-	/**/
+	
 }
+*/
