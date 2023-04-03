@@ -1,258 +1,224 @@
-﻿*{
-	box-sizing:border-box;
+﻿html, body, div{ 
+    margin:0 auto;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-html{
-	margin:0;
-	padding:9;
-	height:100%;
-	background-color:#FFF;
+#Main {
+	background-image: url('../img/background_4x_ws_2.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto 100%;
 }
 
-body{
-	margin:0 auto;
-	/*width:960px;*/
-	min-width: 100vw;
-	min-height: 100vh;
-	background-color:#FFFFCC;
+.main {
+	width:calc(100% - 45px);
+	float:left;
+	left:45px;
+	padding:0;
 }
 
-/* The sidebar menu */
+.header {
+	z-index: 19;
+	position: sticky;
+	top: 0;
+	width:calc(100% - 45px);
+	left:45px;
+	z-index: 999;
+	background-color:#B74EFF;
+	color:white;
+	height:45px;
+	right: 0;
+	border-bottom: 1px solid #660000FF;
+	text-align:center;
+}
+
+.main_logo{
+	height:48px;
+}
+
 .sidebar {
-  height: 95vh; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: relative; /* Stay in place */
-  z-index: 2; /* Stay on top */
-  top: 5vh;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-}
-
-/* The sidebar links */
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* The button used to open the sidebar */
-.openbtn {
-	font-size: 20px;
-	cursor: pointer;
-	background-color: #111;
-	color: white;
-	padding: 10px 15px;
-	border: none;
-}
-
-.openbtn:hover {
-	background-color: #444;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: header header header header header;
-  background-color: #2196F3;
-  padding: 10px;
-}
-
-.musicbtn{
-	font-size: 20px;
 	position:fixed;
-	bottom:1vh;
-	right:0.5vh;
-	cursor: pointer;
-	background-color: #111;
-	color: white;
-	padding: 10px 15px;
-	border: none;
+	height: 100%;
+	top:0;
+	min-width:45px;
+	width:45px;
+
+	background-image: linear-gradient(to bottom, #c6c500, #cbb100, #cc9c00, #ca8800, #c6750d);
+
+	border-right: 1px solid #660000FF;
 }
 
-.sbsubmenu {
-	/*width:85vw;*/
-	height: 45px auto;
-	margin: auto;
-	margin-left: 30px;
-	margin-right: 30px;
-	margin-top: 10px;
-	background-color:gray;
-	font-size: 20px;
-	font-family: hmiamifont;
-	font-color:black;
-}
-
-.togglesm {
-	position: fixed;
-	background-color:rgb(255,255,255,0);
-	border:0;
+.content {
+	position:fixed;
+	height: 100%;
+	width:100%;
+	left:45px;
 	margin:0;
 	padding:0;
-	/*right:10vh;*/
 }
 
-@font-face {
-	font-family: hmiamifont; 
-	src: url('../fonts/justiceout.ttf');
-}
-
-#sbSmDiv {
-	font-family: hmiamifont; 
-	color: blue;
-	font-size: 35px;
-	display: none;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s; /* If you want a transition effect */
-  padding: 20px;
-  position:fixed;
-  top: 5vh;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-} 
-
-#myMainFrame {
-	height:90vh;
-	width:95vw;
-	position:absolute;
-	z-index: 1;
-	top:5vh;
-	bottom:5vh;
-	right:0;
-	overflow-x:hidden;
-	font-size: 25px;
-	font-family: hmiamifont;
-}
-
-#myTopbar {
-	height:5vh;
-	width:100vw;
-	position:absolute;
-	z-index: 1;
-	top:0;
+.innerContent {
+	position:sticky;
+	width:100%;
 	left:0;
-	background-color:#111;
-	overflow-x:hidden;
+	background-color: #000000FF;
+	color:white;
+
+	text-align: justify;
+	text-justify: inter-word;
+			
+	margin:16px;
+
+	height: auto;
+
+	border: 8px double #631EA6;
+	border-radius: 20px;
 }
 
-#tittlebar {
-	position:absolute;
-	top:0px;
-	right:0px;
-	background-color:green;
-	height:5vh;
-	width:75vw;
+		
+.footer {
+	background-color:#C513B6;
+	color:white;
+	height:100px;
+	bottom:0;
+	text-align:center;
+	vertical-align:center;
 }
 
-#copyright {
-	position:absolute;
-	bottom:0px;
-	right:0px;
-	background-color:green;
-	height:5vh;
-	width:75vw;
+.img1 {
+	height: 96px;
+	left:150px;
 }
 
-#mainframe{
-	position:absolute;
-	top:5vh;
-	bottom:5vh;
-	left:25vh;
-	background-color:yellow;
-	height:90vh;
-	width:75vw;
+.sideL {
+	position:sticky;
+	left:0;
+	height:100%;
 }
 
-#musicbutton {
-	position:absolute;
-	top:5vh;
-	bottom:10vh;
-	left:25vh;
-	background-color:yellow;
-	height:90vh;
-	width:75vw;
+.sideR {
+	right:0;
 }
 
-@media only screen and (min‐width:960px){
-	/* styles for browsers larger than 960px; */
-	body{
-		margin:0 auto;
-		width:960px;
-		height:100vh;
-		background-color:#FFFFCC;
+.row::after{
+	content:"";
+	clear:both;
+	display: table;
+}
+
+[class*="col-"] {
+	float :left;
+}
+
+.col-0 {width:5%}
+.col-1	{width:8.33%}
+.col-2	{width:16.66%}
+.col-3 {width:20%}
+.col-4	{width:25%}
+.col-5	{width:33.33%}
+.col-6	{width:41.66%}
+.col-7	{width:50%}
+.col-8	{width:58.33%}
+.col-9	{width:66.66%}
+.col-10	{width:75%}
+.col-11 {width:83.33%}
+.col-12 {width:91.66%}
+.col-13 {width:100%}
+.col-14 {width:20%}
+.col-15 {width:80%}
+.col-16 {width:95%}
+
+.fil-0 {height:5%}
+.fil-1	{height:8.33%}
+.fil-2	{height:16.66%}
+.fil-3 {height:20%}
+.fil-4	{height:25%}
+.fil-5	{height:33.33%}
+.fil-6	{height:41.66%}
+.fil-7	{height:50%}
+.fil-8	{height:58.33%}
+.fil-9	{height:66.66%}
+.fil-10	{height:75%}
+.fil-11 {height:83.33%}
+.fil-12 {height:91.66%}
+.fil-13 {height:100%}
+.fil-14 {height:20%}
+.fil-15 {height:80%}
+.fil-16 {height:95%}
+
+@media only screen and (max-width: 730px) {
+	/* For mobile phones: */
+	.main {
+		width:100%;
+		display: table;
+	}
+
+	.col-0 {
+		width:100%;
+	}
+
+	.sidebar {
+		position:sticky;
+		height: 45px;
+		width:100%;
+		background-image: linear-gradient(90deg, #c6c500, #cbb100, #cc9c00, #ca8800, #c6750d);
+		border: 0;
+		border-bottom: 1px solid #660000FF;
+		margin:0;
+		padding:0;
+	}
+
+	.header {
+		display:none;
+	}
+
+	.banner {
+		background
+	}
+
+	.sideL {
+		display:none;
+	}
+
+	.sideR {
+		display:none;
+	}
+
+	.col-7 {
+		position:sticky;
+		left:0;
+		width:100%;
+	}
+
+	.content {
+		height:calc(100% - 45px);
+		top: 45px;
+		left:0;
+		width:100%;
+	}
+
+	.innerContent {
+		width:90%;
 	}
 }
-@media only screen and (min‐width:1440px){
-	/* styles for browsers larger than 1440px; */
-	body{
-		margin:0 auto;
-		width:1440px;
-		height:100vh;
-		background-color:#FFFFCC;
+
+@media only screen and (min-width:731px) and (max-width: 1280px) {
+	/* For low res browsers: */
+	.main {
+		clear:both;
+		display: table;
 	}
-}
 
-@media only screen and (min‐width:1920px){
-	/* styles for browsers larger than 1920px; */
-	body{
-		margin:0 auto;
-		width:1920px;
-		height:100vh;
-		background-color:#FFFFCC;
+	.col-0 {
+		width:100%;
 	}
-}
 
-@media only screen and (min‐width:2000px){
-	/* for sumo sized (mac) screens */
-}
-@media only screen and (max‐device‐width:480px){
-	/* styles for mobile browsers smaller than 480px; (iPhone) */
-}
-@media only screen and (device‐width:768px){
-	/* default iPad screens */
-}
+	.col-4 {
+		width:8.33%;
+	}
 
-/* different techniques for iPad screening */
-@media only screen and (min‐device‐width: 481px) and (max‐device‐width: 1024px) and (orientation:portrait) {
-	/* For portrait layouts only */
-}
-
-
-@media only screen and (min‐device‐width: 481px) and (max‐device‐width: 1024px) and (orientation:landscape) {
-	/* For landscape layouts only */
-}
-
-@media only screen and (min‐device‐width: 1441px) and (max‐device‐width: 1920px) and (orientation:landscape) {
-	/* For landscape layouts only */
-	body{
-		margin:0 auto;
-		width:1920px;
-		height:100vh;
-		background-color:#FFFFCC;
+	.col-7 {
+		width:83.33%;
 	}
 }

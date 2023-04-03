@@ -10,13 +10,18 @@ $("iframe").ready().bind('scroll', function ()
 });
 
 
-
+*/
 $(document).ready(function() 
 	{
-		console.log($("iFrame").scrollX + ", " + $("iFrame").scrollY);
+		var element = $("#Content").contents().find('#Main');
+		element.click(function() {
+		  alert( "Handler for .click() called." );
+		});
 	}
 );
-*/
+
+
+
 
 window.addEventListener (
 	"message",

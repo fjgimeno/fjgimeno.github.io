@@ -10,114 +10,16 @@
 	<meta name="description" content="Hotline Miami Fan Wiki">
 	<meta name="keywords" content="wiki, hotline miami, fan project">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<meta http-equiv="Access-Control-Allow-Origin">
 
+	<link rel="stylesheet" href="./css/main.css">
+
 	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
-
-	<style type="text/css">
-		Access-Control-Allow-Origin: *
-		html, body, div{ 
-            margin:0 auto;
-			padding:0;
-			border: 0;
-			box-sizing: border-box;
-			display: inline-block;
-        }
-
-		body{
-			background-color:#330000FF;
-			background-image: url('img/background.jpg');
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-size: cover;
-		}
-
-		.main {
-			width:100%;
-			float:left;
-			padding:0;
-		}
-
-		.content {
-			background-color: #000000FF;
-			color:white;
-
-			text-align: justify;
-			text-justify: inter-word;
-			
-			height: auto;
-
-			border: 8px double #631EA6;
-			border-radius: 20px;
-		}
-
-		
-		.footer {
-			background-color:#C513B6;
-			color:white;
-			height:100px;
-			bottom:0;
-			text-align:center;
-			vertical-align:center;
-		}
-
-		.img1 {
-			height: 96px;
-			left:150px;
-		}
-
-		.sideL {
-			left:0;
-		}
-
-		.sideR {
-			right:0;
-		}
-
-		/*
-		.row::after{
-			content:"";
-			clear:both;
-			display: table;
-		}
-		*/
-
-		[class*="col-"] {
-			float :left;
-			/*padding:15px;*/
-			/*border: 1px solid red;*/
-		}
-
-		.col-0 {width:5%}
-		.col-1	{width:8.33%}
-		.col-2	{width:16.66%}
-		.col-3 {width:20%}
-		.col-4	{width:25%}
-		.col-5	{width:33.33%}
-		.col-6	{width:41.66%}
-		.col-7	{width:50%}
-		.col-8	{width:58.33%}
-		.col-9	{width:66.66%}
-		.col-10	{width:75%}
-		.col-11 {width:83.33%}
-		.col-12 {width:91.66%}
-		.col-13 {width:100%}
-		.col-14 {width:20%}
-		.col-15 {width:80%}
-		.col-16 {width:95%}
-	</style>
-
-	<script>
-		$(window).on('scroll', function() {
-			var scroll = $(window).scrollTop();
-			window.postMessage(scroll, "gimenoor.github.io");
-			//window.parent.ToggleHeader($(window).scrollTop());
-		});
-	</script>
 </head>
 <body>
-
-	<div class="main">
+	<div id="Main" class="main">
 		<div class="col-13">
 			<div class="sideL col-4">
 				<p></p>
@@ -136,7 +38,7 @@
 		<div class="sideL col-4">
 			<p></p>
 		</div>
-		<div class="content col-7">
+		<div class="innerContent col-7">
 			<p>
 				Grace, I came back to life before your eyes. I held back death. Look, I can't make your dream come true forever, but I can make it come true today. It is! It's the city of New New York! Strictly speaking, it's the fifteenth New York since the original, so that makes it New-New-New-New-New-New-New-New-New-New-New-New-New-New-New New York. Well, I'll tell you something that should be of vital interest to you.…That you, Sir, are a NITWIT! When I say run, run. ...RUN! Right! So stop dilly-dallying, and cross it!
 

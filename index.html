@@ -10,136 +10,28 @@
 	<meta name="description" content="Hotline Miami Fan Wiki">
 	<meta name="keywords" content="wiki, hotline miami, fan project">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<meta http-equiv="Access-Control-Allow-Origin">
-	<!--<link rel="stylesheet" href="./css/main.css">-->
+	<link rel="stylesheet" href="./css/main.css">
 	
 	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
 	<script language="JavaScript" type="text/javascript" src="js/main.js"></script>
-
-
-	<style type="text/css">
-		html, body, div{ 
-			height:auto%;
-            margin:0 auto;
-			box-sizing: border-box;
-			background-color:#330000FF;
-        }
-
-		.main {
-			width:100%;
-			float:left;
-			padding:0;
-		}
-
-		.header {
-			position: sticky;
-			top: 0;
-			left:5%;
-			z-index: 999;
-			background-color:#B74EFF;
-			color:white;
-			height:45px;
-			right: 0;
-			border-bottom: 1px solid #660000FF;
-			text-align:center;
-		}
-
-		.main_logo{
-			height:48px;
-		}
-
-		.sidebar {
-			position:absolute;
-			height: 100%;
-			left:0;
-
-			background-image: linear-gradient(to bottom, #c6c500, #cbb100, #cc9c00, #ca8800, #c6750d);
-
-			/*
-			background: #B74EFF;
-			background: -moz-linear-gradient(top, #B74EFF 0%, #C513B6 100%);
-			background: -webkit-linear-gradient(top, #B74EFF 0%, #C513B6 100%);
-			background: linear-gradient(to bottom, #B74EFF 0%, #C513B6 100%);
-			*/
-
-			-webkit-box-shadow: 0px 0px 15px 0 px #000000FF; 
-			box-shadow: 0px 0px 15px 0px #000000FF;
-
-			border-right: 1px solid #660000FF;
-		}
-
-		.content {
-			position:absolute;
-			height: 100%;
-			right:0;
-			bottom:0;
-			margin:0;
-			padding:0;
-		}
-
-		.row::after{
-			content:"";
-			clear:both;
-			display: table;
-		}
-
-		[class*="col-"] {
-			float :left;
-		}
-
-		.col-0 {width:5%}
-		.col-1	{width:8.33%}
-		.col-2	{width:16.66%}
-		.col-3 {width:20%}
-		.col-4	{width:25%}
-		.col-5	{width:33.33%}
-		.col-6	{width:41.66%}
-		.col-7	{width:50%}
-		.col-8	{width:58.33%}
-		.col-9	{width:66.66%}
-		.col-10	{width:75%}
-		.col-11 {width:83.33%}
-		.col-12 {width:91.66%}
-		.col-13 {width:100%}
-		.col-14 {width:20%}
-		.col-15 {width:80%}
-		.col-16 {width:95%}
-
-		.fil-0 {height:5%}
-		.fil-1	{height:8.33%}
-		.fil-2	{height:16.66%}
-		.fil-3 {height:20%}
-		.fil-4	{height:25%}
-		.fil-5	{height:33.33%}
-		.fil-6	{height:41.66%}
-		.fil-7	{height:50%}
-		.fil-8	{height:58.33%}
-		.fil-9	{height:66.66%}
-		.fil-10	{height:75%}
-		.fil-11 {height:83.33%}
-		.fil-12 {height:91.66%}
-		.fil-13 {height:100%}
-		.fil-14 {height:20%}
-		.fil-15 {height:80%}
-		.fil-16 {height:95%}
-
-	</style>
 </head>
 <body>
-	<div class="main">
-		<div id="Header" class="header col-16">
+	<div class="main col-13">
+		<div id="Header" class="header">
 			<img class="main_logo" src="img/logo1.webp" alt="Logo 1" onclick="ToggleHeader(this)"> </img>
 		</div>
 
-		<div class="sidebar col-0">
+		<div class="sidebar">
 			
 		</div>
 
-		<div id ="Content" class="content col-16"></div>
+		<div id ="Content" class="content col-13"></div>
 	</div>
-
 	<script language="JavaScript">
-		document.getElementById("Content").innerHTML='<object class="mainframe content col-13 fil-13" type="text/html" data="pholder.html" ></object>';
+		document.getElementById("Content").innerHTML='<object id="PageContent" class="content" type="text/html" data="pholder.html" ></object>';
 	</script>
 </body>
 </html>
