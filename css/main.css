@@ -1,4 +1,13 @@
-﻿html, body, div{ 
+﻿@font-face {
+  font-family: rubik-regular;
+  src: url('../fonts/Rubik-Medium.ttf');
+}
+
+html *{
+	font-family:rubik-regular;
+}
+
+html, body, div{ 
     margin:0 auto;
 	padding: 0;
 	box-sizing: border-box;
@@ -373,7 +382,7 @@ button.expand {
 		display:none;
 	}
 
-	.col-7 {
+	.col-9 {
 		position:sticky;
 		left:0;
 		width:100%;
