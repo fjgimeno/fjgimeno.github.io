@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HMiamiWiki</title>
+	<link rel="icon" type="image/x-icon" href="./img/tonyMask.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+	<meta name="description" content="Hotline Miami Fan Wiki">
+	<meta name="keywords" content="wiki, hotline miami, fan project">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Access-Control-Allow-Origin">
+
+	<link rel="stylesheet" href="./css/main.css">
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+	<div id="Main" class="main">
+		<div id="navbar" class="header">
+			<img class="main_logo" src="img/logo1.webp" alt="Logo 1" onclick="ToggleHeader(this)"> </img>
+		</div>
+		<div class="col-13">
+			<div class="sideL col-4">
+				<p></p>
+			</div>
+			<div class="col-7">
+				<br/>
+				<br/>
+				<br/>
+				<img class="img1" src="img/logo1.webp" alt="Logo 1"> </img>
+				<br/>
+				<br/>
+				<a class="index" href="#" alt="">&emsp;Go to Main Page</a>
+				<br/>
+				<div class="drop1">
+					&nbsp;
+					<img src="img/icons/book.webp" height="10px"></img>
+					&nbsp;
+					<p>Explore</p>
+					<div class="drop1-content">
+						<a href="#">Main Page</a>
+						<br/>
+						<a href="#">All Pages</a>
+						<br/>
+						<a href="#">Community</a>
+						<br/>
+					</div>
+				</div>
+				<div class="drop1">
+					&nbsp;
+					<img src="img/icons/book.webp" height="10px"></img>
+					&nbsp;
+					<p>Content</p>
+					<div class="drop1-content">
+						<a href="#">Characters</a>
+						<br/>
+						<a href="#">Weapons</a>
+						<br/>
+						<a href="#">Masks</a>
+						<br/>
+					</div>
+				</div>
+				<div class="drop1">
+					&nbsp;
+					<img src="img/icons/book.webp" height="10px"></img>
+					&nbsp;
+					<p>About</p>
+					<div class="drop1-content">
+						<a href="#">Who am I</a>
+						<br/>
+						<a href="#">Developers</a>
+						<br/>
+						<a href="#">Contact</a>
+						<br/>
+					</div>
+				</div>
+			</div>
+			<div class="sideR col-4">
+				<p></p>
+			</div>
+		</div>
+		
+		<div class="sideL col-2">
+			<p></p>
+		</div>
+		<div class="innerContent col-9">
+			<button type="button" title="Expand" class="expand" onclick="ExpandCanvas()">E</button> 
+			<div class="innerContent2">
+				<div class="content1L col-9">
+					<h1>Home</h1>
+					<div class="gallery">
+						<div class="mainGallery">
+							<img src="img/gallery1/1.webp" style="width:100%">
+						</div>
+						<div class="mainGallery">
+							<img src="img/gallery1/2.webp" style="width:100%">
+						</div>
+						<div class="mainGallery">
+							<img src="img/gallery1/3.webp" style="width:100%">
+						</div>
+						<div class="mainGallery">
+							<img src="img/gallery1/4.webp" style="width:100%">
+						</div>
+						<div class="mainGallery">
+							<img src="img/gallery1/5.webp" style="width:100%">
+						</div>
+						<div class="mainGallery">
+							<img src="img/gallery1/6.webp" style="width:100%">
+						</div>
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+						<a class="next" onclick="plusSlides(1)">❯</a>
+					</div>
+				</div>
+				<div class="content1R col-5">
+					<div class="expWiki1">
+						<h3>Expanding the Wiki</h3>
+					</div>
+
+					<p class="expand">
+						Help to expand the wiki! Please create new pages and tell your friends about the game! 
+					</p>
+				</div>
+			</div>
+			<div class="innerContent2">
+				<div class="content1L col-9">
+					<div class="expWiki1">
+						<h3>About ...</h3>
+					</div>
+					<p class="about">
+						Hotline Miami is a high-octane action game overflowing with raw brutality, 
+						hard-boiled gunplay and skull crushing close combat. Set in an alternative 
+						1989 Miami, you will assume the role of a mysterious antihero on a murderous 
+						rampage against the shady underworld at the behest of voices on your answering 
+						machine. Soon you'll find yourself struggling to get a grip of what is going 
+						on and why you are prone to these acts of violence. Hotline Miami's sequel/prequel, 
+						Hotline Miami 2: Wrong Number was released on the 10th of March 2015, it features 
+						12 new playable characters as well as new weapons and levels and a level editor.
+					</p>
+					<img src="img/HotlineMiami_Logo.webp" class="logo" alt="Hotline Miami Cover"></img>
+				</div>
+				<div class="content1R col-5">
+					
+				</div>
+			</div>
+			<div class="innerContent2">
+				<div class="content1L col-9">
+					<div class="expWiki1">
+						<h3>Content ...</h3>
+					</div>
+					
+				</div>
+				<div class="content1R col-5">
+					
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="sideR col-2">
+			
+		</div>
+		<div class="footer col-13">
+			test
+		</div>
+	</div>
+	<script>
+		/*Header Hider*/
+		var prevScrollpos = window.pageYOffset;
+		window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+			if (currentScrollPos <= 10) {
+				document.getElementById("navbar").style.top = "-50px";
+			} else {
+				document.getElementById("navbar").style.top = "0";
+			}
+			prevScrollpos = currentScrollPos;
+		}
+	</script>
+	<script>
+		/*ImageGallery 1*/
+		let slideIndex = 1;
+		showSlides(slideIndex);
+		AutoSlides();
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  let i;
+		  let slides = document.getElementsByClassName("mainGallery");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		}
+
+		function AutoSlides() {
+			let i;
+			let slides = document.getElementsByClassName("mainGallery");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+			slides[slideIndex-1].style.display = "block";  
+			setTimeout(AutoSlides, 6000); // Change image every X seconds
+		}
+	</script>
+	<script>
+		var expanded = false;
+		function ExpandCanvas() {
+			var sideL = document.getElementsByClassName("col-2")[0];
+			var sideR = document.getElementsByClassName("col-2")[0];
+			var canvas = document.getElementsByClassName("col-9")[0];
+
+			if(expanded == false) {
+				expanded = true;
+				sideL.style.width = "2.5%"; 
+				sideR.style.width = "2.5%"; 
+				canvas.style.width = "95%";
+			} else {
+				expanded = false;
+				sideL.style.width = "16.66%"; 
+				sideR.style.width = "16.66%";
+				canvas.style.width = "66.66%";
+			}
+		}
+	</script>
+</body>
+</html>
