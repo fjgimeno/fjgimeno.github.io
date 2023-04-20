@@ -48,6 +48,7 @@
 						<br/>
 						<a href="#">Community</a>
 						<br/>
+						<a href="#">Developers</a>
 					</div>
 				</div>
 				<div class="drop1">
@@ -71,8 +72,6 @@
 					<p>About</p>
 					<div class="drop1-content">
 						<a href="#">Who am I</a>
-						<br/>
-						<a href="#">Developers</a>
 						<br/>
 						<a href="#">Contact</a>
 						<br/>
@@ -128,7 +127,7 @@
 			<div class="innerContent2">
 				<div class="content1L col-9">
 					<div class="expWiki1">
-						<h3>About ...</h3>
+						<h3>About Game</h3>
 					</div>
 					<p class="about">
 						Hotline Miami is a high-octane action game overflowing with raw brutality, 
@@ -156,17 +155,23 @@
 						<h3>Content</h3>
 					</div>
 					<br/>
-					<div class="content_gallery">
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-						<img src="#"></img>
-					</div>
+					<table class="content_gallery">
+						<tr>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+						</tr>
+						<tr>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+						</tr>
+						<tr>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+							<th><img src="#"></img></th>
+						</tr>
+					</table>
 				</div>
 				<div class="content1R col-5">
 					<div class="expWiki1">
@@ -237,23 +242,41 @@
 	</script>
 	<script>
 		var expanded = false;
-		function ExpandCanvas() {
-			var sideL = document.getElementsByClassName("col-2")[0];
-			var sideR = document.getElementsByClassName("col-2")[0];
-			var canvas = document.getElementsByClassName("col-9")[0];
+		var resizing = false;
+		var resizerTimer;
+		var width = $(document).width();
+		var sideL = document.getElementsByClassName("col-2")[0];
+		var sideR = document.getElementsByClassName("col-2")[0];
+		var canvas = document.getElementsByClassName("col-9")[0];
 
-			if(expanded == false) {
+		function ExpandCanvas() {
+			if(expanded == false || (width <= 1280 && resizing == true)) {
 				expanded = true;
 				sideL.style.width = "2.5%"; 
 				sideR.style.width = "2.5%"; 
 				canvas.style.width = "95%";
-			} else {
+			} else if (resizing == false){
 				expanded = false;
 				sideL.style.width = "16.66%"; 
 				sideR.style.width = "16.66%";
 				canvas.style.width = "66.66%";
 			}
 		}
+
+		function DisableResizer() {
+			resizing = false;
+		}
+
+		function OnWindowResize() {
+			width = $(document).width();
+			ExpandCanvas();
+			resizing = true;
+
+			clearTimeout(resizerTimer);
+			resizerTimer = setTimeout(DisableResizer, 100);
+		}
+
+		window.onresize = OnWindowResize;
 	</script>
 </body>
 </html>
