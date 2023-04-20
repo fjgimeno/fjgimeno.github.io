@@ -246,6 +246,11 @@ button.expand {
 	z-index:999;
 }
 
+.content_gallery img {
+	width: 25%;
+	height: 25%;
+}
+
 .innerContent2 .expand {
 	float:left;
 }
