@@ -21,60 +21,98 @@
 <body>
 	<div id="Main" class="main">
 		<div id="navbar" class="header">
-			<img class="main_logo" src="img/logo1.webp" alt="Logo 1" onclick="ToggleHeader(this)"> </img>
+			<a class="header_link" href="#" alt="">&emsp;Hotline Miami Wiki</a>
+			<div class="header_drop1">
+				<p>Explore</p>
+				<div class="header-drop1-content">
+					<a href="#">Main Page</a>
+					<br/>
+					<a href="#">All Pages</a>
+					<br/>
+					<a href="#">Community</a>
+					<br/>
+					<a href="#">Developers</a>
+				</div>
+			</div>
+
+			<div class="header_drop1">
+				<p>Content</p>
+				<div class="header-drop1-content">
+					<a href="#">Characters</a>
+					<br/>
+					<a href="#">Weapons</a>
+					<br/>
+					<a href="#">Masks</a>
+					<br/>
+				</div>
+			</div>
+
+			<div class="header_drop1">
+				<p>About</p>
+				<div class="header-drop1-content">
+					<a href="#">Who am I</a>
+					<br/>
+					<a href="#">Contact</a>
+					<br/>
+				</div>
+			</div>
 		</div>
 		<div class="col-13">
 			<div class="sideL col-4">
 				<p></p>
 			</div>
 			<div class="col-7">
-				<br/>
-				<br/>
-				<br/>
-				<img class="img1" src="img/logo1.webp" alt="Logo 1"> </img>
-				<br/>
-				<br/>
-				<a class="index" href="#" alt="">&emsp;Go to Main Page</a>
-				<br/>
-				<div class="drop1">
-					&nbsp;
-					<img src="img/icons/book.webp" height="10px"></img>
-					&nbsp;
-					<p>Explore</p>
-					<div class="drop1-content">
-						<a href="#">Main Page</a>
-						<br/>
-						<a href="#">All Pages</a>
-						<br/>
-						<a href="#">Community</a>
-						<br/>
-						<a href="#">Developers</a>
-					</div>
+				<div class="col-7 banner">
+					<img class="img1" src="img/logo1.webp" alt="Logo 1"> </img>
 				</div>
-				<div class="drop1">
-					&nbsp;
-					<img src="img/icons/book.webp" height="10px"></img>
-					&nbsp;
-					<p>Content</p>
-					<div class="drop1-content">
-						<a href="#">Characters</a>
-						<br/>
-						<a href="#">Weapons</a>
-						<br/>
-						<a href="#">Masks</a>
-						<br/>
+				<div class="col-7 banner">
+					<br/>
+					<br/>
+					<br/>
+					<a class="index" href="#" alt="">&emsp;Hotline Miami Wiki</a>
+					<br/>
+					<div class="drop1">
+						&nbsp;
+						<img src="img/icons/book.webp" height="10px"></img>
+						&nbsp;
+						<p>Explore</p>
+						<div class="drop1-content">
+							<a href="#">Main Page</a>
+							<br/>
+							<a href="#">All Pages</a>
+							<br/>
+							<a href="#">Community</a>
+							<br/>
+							<a href="#">Developers</a>
+						</div>
 					</div>
-				</div>
-				<div class="drop1">
-					&nbsp;
-					<img src="img/icons/book.webp" height="10px"></img>
-					&nbsp;
-					<p>About</p>
-					<div class="drop1-content">
-						<a href="#">Who am I</a>
-						<br/>
-						<a href="#">Contact</a>
-						<br/>
+
+					<div class="drop1">
+						&nbsp;
+						<img src="img/icons/book.webp" height="10px"></img>
+						&nbsp;
+						<p>Content</p>
+						<div class="drop1-content">
+							<a href="#">Characters</a>
+							<br/>
+							<a href="#">Weapons</a>
+							<br/>
+							<a href="#">Masks</a>
+							<br/>
+						</div>
+					</div>
+
+					<div class="drop1">
+						&nbsp;
+						<img src="img/icons/book.webp" height="10px"></img>
+						&nbsp;
+						<p>About</p>
+						<div class="drop1-content">
+							<a href="#">Who am I</a>
+							<br/>
+							<a href="#">Contact</a>
+							<br/>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -155,23 +193,21 @@
 						<h3>Content</h3>
 					</div>
 					<br/>
-					<table class="content_gallery">
-						<tr>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-						</tr>
-						<tr>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-						</tr>
-						<tr>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-							<th><img src="#"></img></th>
-						</tr>
-					</table>
+					<div style="display: inline-block; width:30%; align:center;">
+						<img src="img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+						<br/>
+						<a href="#">Characters</a>
+					</div>
+					<div style="display: inline-block; width:30%; align:center;">
+						<img src="img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+						<br/>
+						<a href="#">Characters</a>
+					</div>
+					<div style="display: inline-block; width:30%; align:center;">
+						<img src="img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+						<br/>
+						<a href="#">Characters</a>
+					</div>
 				</div>
 				<div class="content1R col-5">
 					<div class="expWiki1">
@@ -187,7 +223,7 @@
 			
 		</div>
 		<div class="footer col-13">
-			test
+			<a href="./cv/index.html">Portfolio</a>
 		</div>
 	</div>
 	<script>
@@ -243,22 +279,24 @@
 	<script>
 		var expanded = false;
 		var resizing = false;
+		var disableButton = false;
 		var resizerTimer;
 		var width = $(document).width();
 		var sideL = document.getElementsByClassName("col-2")[0];
 		var sideR = document.getElementsByClassName("col-2")[0];
 		var canvas = document.getElementsByClassName("col-9")[0];
+		var button = document.getElementsByClassName("expand")[0];
 
 		function ExpandCanvas() {
-			if(expanded == false || (width <= 1280 && resizing == true)) {
+			if((expanded == false || (width <= 1400 && resizing == true)) || disableButton) {
 				expanded = true;
 				sideL.style.width = "2.5%"; 
-				sideR.style.width = "2.5%"; 
+				sideR.style.width = "2.5%"; 				
 				canvas.style.width = "95%";
 			} else if (resizing == false){
 				expanded = false;
 				sideL.style.width = "16.66%"; 
-				sideR.style.width = "16.66%";
+				sideR.style.width = "16.66%";				
 				canvas.style.width = "66.66%";
 			}
 		}
@@ -269,6 +307,18 @@
 
 		function OnWindowResize() {
 			width = $(document).width();
+
+			if (width <= 730)
+			{
+				disableButton = true;
+				button.style.display = "none";
+			}
+			else 
+			{
+				disableButton = false;
+				button.style.display = "block";
+			}
+
 			ExpandCanvas();
 			resizing = true;
 

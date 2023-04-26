@@ -13,6 +13,10 @@ html, body, div{
 	box-sizing: border-box;
 }
 
+body {
+	min-width: 540px;
+}
+
 #Main {
 	background-image: url('../img/background_4x_ws_2.jpg');
 	background-repeat: no-repeat;
@@ -143,6 +147,36 @@ a.index:hover {
 	display: inline-block;
 	color: white;
 	font-size:15px;
+}
+
+.header_drop1 {
+	position: relative;
+	display: inline-block;
+	float:left;
+	left: 0;
+	height:100%;
+	width:5%;
+}
+
+.header_link {
+	text-decoration:none;
+}
+
+.header-drop1-content {
+	left:-10%;
+	top:100%;
+	display: none;
+	position: absolute;
+	background-color: #4D4D4D;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border: 1px solid #4A4A4A;
+	border-radius: 3px;
+	z-index: 1;
+}
+
+.header_drop1:hover .header-drop1-content {
+	display: block;
 }
 
 .drop1 img {
@@ -316,10 +350,22 @@ content_gallery {
 	text-align:center;
 }
 
+.col-7 .banner {
+	width:50%;
+	text-align: center;
+}
+
+.col-7 .banner a {
+	text-align: center;
+}
+
+.drop1 {
+	width:33.3%;
+}
+
 .row::after{
 	content:"";
 	clear:both;
-	display: table;
 }
 
 [class*="col-"] {
@@ -366,7 +412,6 @@ content_gallery {
 	/* For mobile phones: */
 	.main {
 		width:100%;
-		display: table;
 	}
 
 	.col-0 {
@@ -420,13 +465,25 @@ content_gallery {
 	.innerContent {
 		width:90%;
 	}
+
+	.col-7 {
+		width:100%;
+	}
+
+	.col-7 .banner {
+		width:50%;
+	}
+
+	.col-5 {
+		width:100%;
+	}
+
 }
 
-@media only screen and (min-width:731px) and (max-width: 1280px) {
+@media only screen and (min-width:731px) and (max-width: 1279px) {
 	/* For low res browsers: */
 	.main {
 		clear:both;
-		display: table;
 	}
 
 	.content1R.col-5 {
@@ -458,6 +515,14 @@ content_gallery {
 	}
 
 	.col-7 {
-		width:83.33%;
+		width:100%;
+	}
+
+	.col-7 .banner {
+		width:50%;
+	}
+
+	.col-5 {
+		width:100%;
 	}
 }
