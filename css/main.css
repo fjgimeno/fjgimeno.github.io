@@ -158,8 +158,8 @@ a.index:hover {
 	width:5%;
 }
 
-.header_link {
-	text-decoration:none;
+.header_	link {
+	height:35%;
 }
 
 .header-drop1-content {
@@ -307,9 +307,11 @@ content_gallery {
 }
 		
 .footer {
-	background-color:#C513B6;
+	/*background-color:#C513B6;*/
+	background-color: black;
 	color:white;
-	height:100px;
+	font-size:25px;
+	height:450px;
 	bottom:0;
 	text-align:center;
 	vertical-align:center;
@@ -344,10 +346,19 @@ content_gallery {
 }
 
 .expWiki1 {
-	border: 5px solid #FF00E7;
+	border: 5px solid #6F0280;
 	border-radius: 20px 0px 20px 0px;
-	background-color:#0AFFFE;
+	background-color:#C048AE;
 	text-align:center;
+	color: black;
+}
+
+.privacy_policy { 
+	!important;
+	overflow: scroll;
+	height:calc(100% - 25px);
+	width:100%;
+	color:white;
 }
 
 .col-7 .banner {
