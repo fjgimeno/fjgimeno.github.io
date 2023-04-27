@@ -17,15 +17,39 @@ body {
 	min-width: 540px;
 }
 
+ /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
+
 #Main {
 	background-image: url('../img/background_4x_ws_2.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: auto 100%;
+	height:100%;
 }
 
 .main {
-	width:calc(100% - 45px);
+	overflow: auto;
+	/*width:calc(100% - 45px);*/
+	width:100%;
+	height:100%;
 	float:left;
 	left:45px;
 	padding:0;
@@ -37,7 +61,7 @@ body {
 	position: sticky;
 	top:-50px;
 	width:calc(100% - 45px);
-	left:0;
+	left:45px;
 	background-color:#B74EFF;
 	color:white;
 	height:45px;
@@ -49,7 +73,7 @@ body {
 #navbar {
   position: fixed; /* Make it stick/fixed */
   top: -50px; /* Stay on top */
-  width: 100%; /* Full width */
+  /*width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
@@ -311,7 +335,7 @@ content_gallery {
 	background-color: black;
 	color:white;
 	font-size:25px;
-	height:450px;
+	height:auto;
 	bottom:0;
 	text-align:center;
 	vertical-align:center;
@@ -482,7 +506,8 @@ content_gallery {
 	}
 
 	.col-7 .banner {
-		width:50%;
+		left:0;
+		width:100%;
 	}
 
 	.col-5 {

@@ -56,12 +56,10 @@
 					<div class="header-drop1-content">
 						<a href="#">Who am I</a>
 						<br/>
-						<a onclick="ChangeURL('./contact.html')">Contact</a>
+						<a href="./content/contact.html">Contact</a>
 						<br/>
 					</div>
 				</div>
-
-				<p class="date" style="text-align: right;"></p>
 			</div>
 			<div class="col-13">
 				<div class="sideL col-4">
@@ -248,12 +246,9 @@
 				prevScrollpos = currentScrollPos;
 		});
 	</script>
-	<script type="text/javascript">
+	<script>
 		/*ImageGallery 1*/
-		
-		var slides = document.getElementsByClassName("mainGallery");
-		var slideIndex = Math.round(slides.length * Math.random());
-
+		let slideIndex = 1;
 		showSlides(slideIndex);
 		AutoSlides();
 
@@ -265,67 +260,125 @@
 		  showSlides(slideIndex = n);
 		}
 
-		function HideSlides() {
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-			}
-		}
-
 		function showSlides(n) {
-			var i;
-		  
-			if (n > slides.length) {
-				slideIndex = 1
-			}
-			if (n < 1) {
-				slideIndex = slides.length
-			}
-			HideSlides();
-			slides[slideIndex-1].style.display = "block";
+		  let i;
+		  let slides = document.getElementsByClassName("mainGallery");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		  }
+		  slides[slideIndex-1].style.display = "block";
 		}
 
 		function AutoSlides() {
-			var i;
-
-			HideSlides();
+			let i;
+			let slides = document.getElementsByClassName("mainGallery");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
 			slideIndex++;
 			if (slideIndex > slides.length) {slideIndex = 1}    
-				slides[slideIndex-1].style.display = "block";  
+			slides[slideIndex-1].style.display = "block";  
 			setTimeout(AutoSlides, 6000); // Change image every X seconds
 		}
 	</script>
-	<script type="text/javascript">
-		let dateP = document.getElementsByClassName("date")[0];
-		const date = new Date();
-		let months = new Array();
-		{
-			months[0] = "January";
-			months[1] = "February";
-			months[2] = "March";
-			months[3] = "April";
-			months[4] = "May";
-			months[5] = "June";
-			months[6] = "July";
-			months[7] = "August";
-			months[8] = "September";
-			months[9] = "October";
-			months[10] = "November";
-			months[11] = "December";
-		}
-		let days = new Array();
-		{
-			days[0] = "Sunday";
-			days[1] = "Monday";
-			days[2] = "Tuesday";
-			days[3] = "Wednesday";
-			days[4] = "Thursday";
-			days[5] = "Friday";
-			days[6] = "Saturday";
-		}
+	<script>
+		var expanded = false;
+		var resizing = false;
+		var disableButton = false;
+		var resizerTimer;
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+		var width;
 
 		{
-			dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+			if(!isFirefox) {
+				width = $(document).width();
+			}
+			else {
+				width = window.innerWidth;
+			}
+		}
+		
+		var sideL = document.getElementsByClassName("col-2")[0];
+		var sideR = document.getElementsByClassName("col-2")[0];
+		var canvas = document.getElementsByClassName("col-9")[0];
+		var button = document.getElementsByClassName("expand")[0];
+
+		/*innerWidth*/
+		function ExpandCanvas() {
+			if((expanded == false || (width <= 1400 && resizing == true)) || disableButton) {
+				expanded = true;
+				sideL.style.width = "2.5%"; 
+				sideR.style.width = "2.5%"; 				
+				canvas.style.width = "95%";
+			} else if (resizing == false){
+				expanded = false;
+				sideL.style.width = "16.66%"; 
+				sideR.style.width = "16.66%";				
+				canvas.style.width = "66.66%";
+			}
+		}
+
+		function DisableResizer() {
+			resizing = false;
+		}
+
+		function OnWindowResize() {
+			if(!isFirefox) {
+				width = $(document).width();
+			}
+			else {
+				width = window.innerWidth;
+			}
+
+			if (width <= 730)
+			{
+				disableButton = true;
+				button.style.display = "none";
+			}
+			else 
+			{
+				disableButton = false;
+				button.style.display = "block";
+			}
+
+			ExpandCanvas();
+			resizing = true;
+
+			clearTimeout(resizerTimer);
+			resizerTimer = setTimeout(DisableResizer, 100);
+		}
+
+		window.onresize = OnWindowResize;
+	</script>
+	<script>
+		var showPP = false;
+		var ppDiv = document.getElementsByClassName("privacy_policy")[0];
+		var button = document.getElementsByClassName("pp_button")[0];
+
+		function ManagePP() {
+			if(showPP) {
+				ppDiv.style.display = "block";
+				button.innerHTML = "Hide Privacy Policy";
+			} 
+			else {
+				ppDiv.style.display = "none";
+				button.innerHTML = "Show Privacy Policy";
+			}
+		}
+
+		function TogglePP() {
+			showPP = !showPP;
+			ManagePP();
 		}
 	</script>
+	<!--
+	<script language="JavaScript">
+		const myWorker = new Worker("./js/cookie_manager.js");
+
+		document.getElementById("Content").innerHTML='<object id="PageContent" class="content" type="text/html" data="./content/main.html" ></object>';
+	</script>
+	-->
 </body>
 </html>
