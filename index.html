@@ -15,8 +15,7 @@
 	<meta http-equiv="Access-Control-Allow-Origin">
 	<link rel="stylesheet" href="./css/main.css">
 	
-	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
-	<script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+	
 </head>
 <body>
 	<div class="main col-13">
@@ -25,11 +24,11 @@
 		</div>
 		<div id="Main" class="main">
 			<div id="navbar" class="header">
-				<a class="header_link" href="#" alt="">&emsp;Hotline Miami Wiki</a>
+				<a class="header_link" onclick="ChangeURL('./index.html')" alt="">&emsp;Hotline Miami Wiki</a>
 				<div class="header_drop1">
 					<p>Explore</p>
 					<div class="header-drop1-content">
-						<a href="#">Main Page</a>
+						<a onclick="ChangeURL('./index.html')">Main Page</a>
 						<br/>
 						<a href="#">All Pages</a>
 						<br/>
@@ -54,7 +53,7 @@
 				<div class="header_drop1">
 					<p>About</p>
 					<div class="header-drop1-content">
-						<a href="#">Who am I</a>
+						<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
 						<br/>
 						<a onclick="ChangeURL('./contact.html')">Contact</a>
 						<br/>
@@ -75,7 +74,7 @@
 						<br/>
 						<br/>
 						<br/>
-						<a class="index" href="#" alt="">&emsp;Hotline Miami Wiki</a>
+						<a class="index" onclick="ChangeURL('./index.html')" alt="">&emsp;Hotline Miami Wiki</a>
 						<br/>
 						<div class="drop1">
 							&nbsp;
@@ -114,9 +113,9 @@
 							&nbsp;
 							<p>About</p>
 							<div class="drop1-content">
-								<a href="#">Who am I</a>
+								<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
 								<br/>
-								<a onclick="ChangeInnerContent('Contact')">Contact</a>
+								<a onclick="ChangeURL('./contact.html')">Contact</a>
 								<br/>
 							</div>
 						</div>
@@ -327,5 +326,8 @@
 			dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
 		}
 	</script>
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
