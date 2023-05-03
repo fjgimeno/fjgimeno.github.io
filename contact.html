@@ -129,27 +129,27 @@
 				<div class="innerContent2">
 					<div class="content1L col-9">
 						<h1>Contact</h1>
-						<form action="/action_page.php">
+						<form action="mailto:gimenoor@esat-alumni.com">
 							<label for="fname">First name:</label><br>
-							<input type="text" id="fname" name="fname" value="Emanueh"><br><br>
+							<input type="text" id="fname" name="fname" value="First name..." onclick="ClearInputBox(this)"><br><br>
 							<label for="lname">Last name:</label><br>
-							<input type="text" id="lname" name="lname" value="Simpson"><br><br>
+							<input type="text" id="lname" name="lname" value="Last name..." onclick="ClearInputBox(this)"><br><br>
 							<label for="email">E-Mail:</label><br>
-							<input type="text" id="email" name="email" value="loremipsum@vitae.com"><br><br>
+							<input type="text" id="email" name="email" value="E-Mail..." onclick="ClearInputBox(this)"><br><br>
 							<label for="txtarea">What can I help you with?</label><br>
 							<textarea style="width: 100%;" id="txtarea" name="txtarea" rows="20" cols="50"></textarea><br><br>
-							<input type="checkbox" id="ppolicy" name="ppolicy" value="AcPPol">
+							<input type="checkbox" id="ppolicy" name="ppolicy" value="AcPPol" onclick="ActivatePPolicyButton()">
 							<label for="ppolicy"> I accept the terms and conditions</label><br>
-							<input type="submit" value="Submit">
+							<input id="submit" type="submit" value="Submit">
 						</form> 
 					</div>
 					<div class="content1R col-5">
 						<div class="expWiki1">
-							<h3>Expanding the Wiki</h3>
+							<h3>Privacy Policy</h3>
 						</div>
 						
 						<!-- PPolicy Start -->
-						<div style="height:600px; overflow:auto; font-size:12px; padding-top:15px;">							
+						<div class="content1R" style="height:600px; overflow:auto; font-size:12px; margin-top:15px; margin-bottom:15px;">							
 							<div data-custom-class="body">
 								<div><strong><span data-custom-class="title">PRIVACY POLICY</span></strong></div>
 								<div><strong><span data-custom-class="subtitle">Last updated April 26, 2023</span></strong></div>
@@ -657,9 +657,11 @@
 			</div>
 		</div>
 		<div class="footer col-13">
-			<p>Proyecto Académico<br/>Programación web <a href="www.esat.es">ESAT</a><br/>Hecho por el alumno <a href="./cv/index.html" target="blank">F. Javier Gimeno Ortiz</a></p>
+			<p>Proyecto Académico<br/>Programación web <a href="https://www.esat.es" target="_blank">ESAT</a><br/>Hecho por el alumno <a href="./cv/index.html" target="blank">F. Javier Gimeno Ortiz</a></p>
 		</div>
 	</div>
+
+
 	<script >
 		/*Header Hider*/
 		var prevScrollpos = window.pageYOffset;

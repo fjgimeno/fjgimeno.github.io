@@ -99,3 +99,24 @@ function ChangeURL(url) {
 
 	window.onresize = OnWindowResize;
 /*Resizer ends*/
+
+{
+	document.getElementById("submit").disabled = true;
+}
+
+function ClearInputBox(element) {
+	if(element.value == "First name..." || element.value == "Last name..." || element.value == "E-Mail...")
+	{
+		element.value = "";
+	}
+}
+
+function ActivatePPolicyButton() {
+	var check = document.getElementById("ppolicy");
+	if(check.checked) {
+		document.getElementById("submit").disabled = false;
+	}
+	else  {
+		document.getElementById("submit").disabled = true;
+	}
+}
