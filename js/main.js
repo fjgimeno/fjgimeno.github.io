@@ -109,6 +109,24 @@ function ClearInputBox(element) {
 	{
 		element.value = "";
 	}
+
+	var ele = document.getElementById("fname");
+	if(ele.value == "" && ele.id != element.id)
+	{
+		ele.value = "First name..."
+	}
+
+	ele = document.getElementById("lname");
+	if(ele.value == "" && ele.id != element.id)
+	{
+		ele.value = "Last name..."
+	}
+
+	ele = document.getElementById("email");
+	if(ele.value == "" && ele.id != element.id)
+	{
+		ele.value = "E-Mail..."
+	}
 }
 
 function ActivatePPolicyButton() {

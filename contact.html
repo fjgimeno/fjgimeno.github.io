@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿<?php
+if($_POST["message"]) {
+mail("gimenoor@esat-alumni.com", "About HMiami Wiki",
+$_POST["insert your message here"]. "From: an@email.address");
+}
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>HMiamiWiki</title>
@@ -129,7 +135,8 @@
 				<div class="innerContent2">
 					<div class="content1L col-9">
 						<h1>Contact</h1>
-						<form action="mailto:gimenoor@esat-alumni.com">
+						<!--
+						<form action="mailto:gimenoor@esat-alumni.com?subject=About_HMiami_Wiki!&body=." method="post">
 							<label for="fname">First name:</label><br>
 							<input type="text" id="fname" name="fname" value="First name..." onclick="ClearInputBox(this)"><br><br>
 							<label for="lname">Last name:</label><br>
@@ -137,11 +144,20 @@
 							<label for="email">E-Mail:</label><br>
 							<input type="text" id="email" name="email" value="E-Mail..." onclick="ClearInputBox(this)"><br><br>
 							<label for="txtarea">What can I help you with?</label><br>
-							<textarea style="width: 100%;" id="txtarea" name="txtarea" rows="20" cols="50"></textarea><br><br>
+							<textarea style="width: 100%;" id="txtarea" name="message" rows="20" cols="50" onclick="ClearInputBox(this)"></textarea><br><br>
 							<input type="checkbox" id="ppolicy" name="ppolicy" value="AcPPol" onclick="ActivatePPolicyButton()">
-							<label for="ppolicy"> I accept the terms and conditions</label><br>
+							<label for="ppolicy">By clicking this, you confirm that you've read the privacy policy in its entirety <span style="font-size: 8px; color:red;">(Required)</span>.</label><br>
 							<input id="submit" type="submit" value="Submit">
 						</form> 
+						-->
+						<script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
+						<script>
+							hbspt.forms.create({
+							region: "eu1",
+							portalId: "139547463",
+							formId: "f8be5216-2780-44cd-a3b4-2d18c206dc5d"
+							});
+						</script>
 					</div>
 					<div class="content1R col-5">
 						<div class="expWiki1">
@@ -709,6 +725,11 @@
 		{
 			dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
 		}
+	</script>
+
+	<script>
+		/* Modifying the form */
+		document.querySelector('[id^="label-email-"]').style.color = "#FFFFFF";
 	</script>
 
 	<script  src="js/jquery-3.6.4.min.js"></script>
