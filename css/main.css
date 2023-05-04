@@ -60,8 +60,10 @@ body {
 	float:left;
 	position: sticky;
 	top:-50px;
-	width:calc(100% - 45px);
-	left:45px;
+	/*idth:calc(100% - 45px);*/
+	width:100%;
+	/*left:45px;*/
+	left:0;
 	background-color:#B74EFF;
 	color:white;
 	height:45px;
@@ -195,9 +197,9 @@ a.index:hover {
 	position: relative;
 	display: inline-block;
 	float:left;
-	left: 0;
-	height:100%;
-	width:5%;
+	margin-left: 40px;
+	height:35%;
+	width:auto;
 }
 
 .header_link {
@@ -475,6 +477,16 @@ content_gallery {
 		display:none;
 	}
 
+	.date {
+		height:35%;
+		display: block;
+	}
+
+	.date::before {
+		content:"\A\A";
+	}
+
+
 	.sidebar {
 		position:sticky;
 		height: 45px;
@@ -487,7 +499,9 @@ content_gallery {
 	}
 
 	.header {
-		display:none;
+		/*display:none;*/
+		height:90px;
+		top: -100px;
 	}
 
 	.banner {
@@ -530,6 +544,18 @@ content_gallery {
 
 	.col-5 {
 		width:100%;
+	}
+
+	.header_logo {
+		position:sticky;
+		left:0;
+		width:50%;
+	}
+
+	.header_menu {
+		position:sticky;
+		left:0;
+		width:50%;
 	}
 
 }

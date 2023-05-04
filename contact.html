@@ -22,45 +22,48 @@ $_POST["insert your message here"]. "From: an@email.address");
 </head>
 <body>
 	<div class="main col-13">
-		<div class="sidebar"></div>
+		<!--
+		<div class="sidebar">
+			
+		</div>
+		-->
 		<div id="Main" class="main">
 			<div id="navbar" class="header">
 				<a class="header_link" onclick="ChangeURL('./index.html')" >&emsp;Hotline Miami Wiki</a>
 				<div class="header_drop1">
-							<p>Explore</p>
-							<div class="header-drop1-content">
-								<a onclick="ChangeURL('./index.html')">Main Page</a>
-								<br/>
-								<a onclick="ChangeURL('./pages.html')">All Pages</a>
-								<br/>
-								<a onclick="ChangeURL('./community.html')">Community</a>
-								<br/>
-								<a onclick="ChangeURL('./developers.html')">Developers</a>
-							</div>
-						</div>
+					<p>Explore</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./index.html')">Main Page</a>
+						<br/>
+						<a onclick="ChangeURL('./pages.html')">All Pages</a>
+						<br/>
+						<a onclick="ChangeURL('./community.html')">Community</a>
+						<br/>
+						<a onclick="ChangeURL('./developers.html')">Developers</a>
+					</div>
+				</div>
 
-						<div class="header_drop1">
-							<p>Content</p>
-							<div class="header-drop1-content">
-								<a onclick="ChangeURL('./characters.html')">Characters</a>
-								<br/>
-								<a onclick="ChangeURL('./weapons.html')">Weapons</a>
-								<br/>
-								<a onclick="ChangeURL('./masks.html')">Masks</a>
-								<br/>
-							</div>
-						</div>
+				<div class="header_drop1">
+					<p>Content</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./characters.html')">Characters</a>
+						<br/>
+						<a onclick="ChangeURL('./weapons.html')">Weapons</a>
+						<br/>
+						<a onclick="ChangeURL('./masks.html')">Masks</a>
+						<br/>
+					</div>
+				</div>
 
-						<div class="header_drop1">
-							<p>About</p>
-							<div class="header-drop1-content">
-								<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
-								<br/>
-								<a onclick="ChangeURL('./contact.html')">Contact</a>
-								<br/>
-							</div>
-						</div>
-
+				<div class="header_drop1">
+					<p>About</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
+						<br/>
+						<a onclick="ChangeURL('./contact.html')">Contact</a>
+						<br/>
+					</div>
+				</div>
 				<p class="date" style="text-align: right;"></p>
 			</div>
 			<div class="col-13">
@@ -135,7 +138,7 @@ $_POST["insert your message here"]. "From: an@email.address");
 				<div class="innerContent2">
 					<div class="content1L col-9">
 						<h1>Contact</h1>
-						<!--
+						<!---->
 						<form action="mailto:gimenoor@esat-alumni.com?subject=About_HMiami_Wiki!&body=." method="post">
 							<label for="fname">First name:</label><br>
 							<input type="text" id="fname" name="fname" value="First name..." onclick="ClearInputBox(this)"><br><br>
@@ -149,7 +152,7 @@ $_POST["insert your message here"]. "From: an@email.address");
 							<label for="ppolicy">By clicking this, you confirm that you've read the privacy policy in its entirety <span style="font-size: 8px; color:red;">(Required)</span>.</label><br>
 							<input id="submit" type="submit" value="Submit">
 						</form> 
-						-->
+						<!--
 						<script charset="utf-8" type="text/javascript" src="https://js-eu1.hsforms.net/forms/embed/v2.js"></script>
 						<script>
 							hbspt.forms.create({
@@ -158,6 +161,7 @@ $_POST["insert your message here"]. "From: an@email.address");
 							formId: "f8be5216-2780-44cd-a3b4-2d18c206dc5d"
 							});
 						</script>
+						-->
 					</div>
 					<div class="content1R col-5">
 						<div class="expWiki1">
@@ -678,58 +682,42 @@ $_POST["insert your message here"]. "From: an@email.address");
 	</div>
 
 
-	<script >
+	<script type="text/javascript">
 		/*Header Hider*/
 		var prevScrollpos = window.pageYOffset;
 		var mainContent = document.getElementsByClassName("main")[0];
+		
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+		var width;
+
+		{
+			if(!isFirefox) {
+				width = $(document).width();
+			}
+			else {
+				width = window.innerWidth;
+			}
+		}
 
 		document.addEventListener('scroll', function(e) {
 			var currentScrollPos = window.pageYOffset;
+			if(width > 730)
+			{
 				if (currentScrollPos <= 10) {
 					document.getElementById("navbar").style.top = "-50px";
 				} else {
 					document.getElementById("navbar").style.top = "0";
 				}
-				prevScrollpos = currentScrollPos;
+			} else 
+			{
+				if (currentScrollPos <= 10) {
+					document.getElementById("navbar").style.top = "-100px";
+				} else {
+					document.getElementById("navbar").style.top = "0";
+				}
+			}
+			prevScrollpos = currentScrollPos;
 		});
-	</script>
-	<script >
-		let dateP = document.getElementsByClassName("date")[0];
-		const date = new Date();
-		let months = new Array();
-		{
-			months[0] = "January";
-			months[1] = "February";
-			months[2] = "March";
-			months[3] = "April";
-			months[4] = "May";
-			months[5] = "June";
-			months[6] = "July";
-			months[7] = "August";
-			months[8] = "September";
-			months[9] = "October";
-			months[10] = "November";
-			months[11] = "December";
-		}
-		let days = new Array();
-		{
-			days[0] = "Sunday";
-			days[1] = "Monday";
-			days[2] = "Tuesday";
-			days[3] = "Wednesday";
-			days[4] = "Thursday";
-			days[5] = "Friday";
-			days[6] = "Saturday";
-		}
-
-		{
-			dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
-		}
-	</script>
-
-	<script>
-		/* Modifying the form */
-		document.querySelector('[id^="label-email-"]').style.color = "#FFFFFF";
 	</script>
 
 	<script  src="js/jquery-3.6.4.min.js"></script>

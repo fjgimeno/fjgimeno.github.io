@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+</head>
+<body>
+	<p>Today is:</p>
+	<br>
+	<p class="date"></p>
+	<img src="./img/gallery1/1.jpg" width="720" height="405">
+	<br>
+	<br>
+	<button onclick="OpenWindow1()">Imagen Fija</button>
+	<button onclick="OpenWindow2()">Imagen Aleatoria</button>
+
+
+	<script>
+		/*Date*/
+
+	</script>
+
+	<script>
+		function OpenWindow1(){
+			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
+			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405'>"); 
+		}
+
+		function OpenWindow2(){
+			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
+			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405'>"); 
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+</head>
+<body>
+	<button onclick="OpenWindow1()">Ventana 1</button>
+	<button onclick="OpenWindow2()">Ventana 2</button>
+	<button onclick="OpenWindow3()">Ventana 3</button>
+	<button onclick="OpenWindow4()">Ventana 4</button>
+
+	<script>
+		function OpenWindow1(){
+			window.open("http://www.esat.es");
+		}
+
+		function OpenWindow2(){
+			window.open("http://www.esat.es","", "left=200, top=200, width=400, height=400");
+		}
+
+		function OpenWindow3(){
+			var wind3 = window.open("","", "left=200, top=200, width=400, height=400");
+			wind3.document.write("<p>HOLA</p>"); 
+		}
+
+		function OpenWindow4(){
+			var wind3 = window.open("","", "left=200, top=200, width=400, height=400");
+			wind3.document.write("<p>HOLA</p><br><form><input type='button' onclick='javascript:self.close()' value='Close'></input></form>"); 
+		}
+	</script>
+</body>
+</html>

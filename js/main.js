@@ -47,8 +47,8 @@ function ChangeURL(url) {
 		}
 	}
 		
-	var sideL = document.getElementsByClassName("col-2")[0];
-	var sideR = document.getElementsByClassName("col-2")[0];
+	var sideL = document.getElementsByClassName("sideL col-2")[0];
+	var sideR = document.getElementsByClassName("sideR col-2")[0];
 	var canvas = document.getElementsByClassName("col-9")[0];
 	var button = document.getElementsByClassName("expand")[0];
 
@@ -136,5 +136,39 @@ function ActivatePPolicyButton() {
 	}
 	else  {
 		document.getElementById("submit").disabled = true;
+	}
+}
+
+{
+	let dateP = document.getElementsByClassName("date")[0];
+	const date = new Date();
+	let months = new Array();
+	{
+		months[0] = "January";
+		months[1] = "February";
+		months[2] = "March";
+		months[3] = "April";
+		months[4] = "May";
+		months[5] = "June";
+		months[6] = "July";
+		months[7] = "August";
+		months[8] = "September";
+		months[9] = "October";
+		months[10] = "November";
+		months[11] = "December";
+	}
+	let days = new Array();
+	{
+		days[0] = "Sunday";
+		days[1] = "Monday";
+		days[2] = "Tuesday";
+		days[3] = "Wednesday";
+		days[4] = "Thursday";
+		days[5] = "Friday";
+		days[6] = "Saturday";
+	}
+
+	{
+		dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
 	}
 }
