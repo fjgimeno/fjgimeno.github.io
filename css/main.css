@@ -164,6 +164,24 @@ a.index:hover {
 	background-color: #B74EFF;
 }
 
+.index_members {
+	position:relative;
+	height: 100%;
+	width:100%;
+	left:0;
+	margin:0;
+	padding:0;
+}
+
+.index_member {
+	float:left;
+	height: auto;
+	width:50%;
+	left:0;
+	margin:0;
+	padding:0;
+}
+
 .drop1 {
 	float:left;
 	left:20px;
@@ -561,4 +579,28 @@ content_gallery {
 	.col-5 {
 		width:100%;
 	}
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* Estilo para la barra de desplazamiento en Firefox */
+::-moz-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #F5F5F5;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
 }
