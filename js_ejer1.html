@@ -8,9 +8,9 @@
 	<meta name="owner" content="F.Javier Gimeno Ortiz">
 </head>
 <body>
-	<p>Today is:</p>
 	<br>
 	<p class="date"></p>
+	<br>
 	<img src="./img/gallery1/1.jpg" width="720" height="405">
 	<br>
 	<br>
@@ -20,18 +20,49 @@
 
 	<script>
 		/*Date*/
+		let dateP = document.getElementsByClassName("date")[0];
+		const date = new Date();
+		let months = new Array();
+		{
+			months[0] = "January";
+			months[1] = "February";
+			months[2] = "March";
+			months[3] = "April";
+			months[4] = "May";
+			months[5] = "June";
+			months[6] = "July";
+			months[7] = "August";
+			months[8] = "September";
+			months[9] = "October";
+			months[10] = "November";
+			months[11] = "December";
+		}
+		let days = new Array();
+		{
+			days[0] = "Sunday";
+			days[1] = "Monday";
+			days[2] = "Tuesday";
+			days[3] = "Wednesday";
+			days[4] = "Thursday";
+			days[5] = "Friday";
+			days[6] = "Saturday";
+		}
 
+		{
+			dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+		}
 	</script>
 
 	<script>
 		function OpenWindow1(){
 			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
-			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405'>"); 
+			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405' style='margin:0; padding:0;'>"); 
 		}
 
 		function OpenWindow2(){
+			var n_index = Math.round(6 * Math.random()) + 1;
 			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
-			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405'>"); 
+			wind3.document.write("<img src='./img/gallery1/" + n_index + ".jpg' width='720' height='405' style='margin:0; padding:0;'>"); 
 		}
 	</script>
 </body>

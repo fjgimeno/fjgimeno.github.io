@@ -418,6 +418,10 @@ content_gallery {
 	width:33.3%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .row::after{
 	content:"";
 	clear:both;
