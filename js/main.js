@@ -139,7 +139,6 @@ function ActivatePPolicyButton() {
 	}
 }
 
-
 function DateHandler() {
 	let dateP = document.getElementsByClassName("date")[0];
 	const date = new Date();
