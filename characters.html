@@ -374,50 +374,19 @@
 	</div>
 
 	<script type="text/javascript">
-		/*ImageGallery 1*/
-		
-		var slides = document.getElementsByClassName("mainGallery");
-		var slideIndex = Math.round(slides.length * Math.random());
+		/*Header Hider*/
+		var prevScrollpos = window.pageYOffset;
+		var mainContent = document.getElementsByClassName("main")[0];
 
-		showSlides(slideIndex);
-		AutoSlides();
-
-		function plusSlides(n) {
-		  showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		  showSlides(slideIndex = n);
-		}
-
-		function HideSlides() {
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
-			}
-		}
-
-		function showSlides(n) {
-			var i;
-		  
-			if (n > slides.length) {
-				slideIndex = 1
-			}
-			if (n < 1) {
-				slideIndex = slides.length
-			}
-			HideSlides();
-			slides[slideIndex-1].style.display = "block";
-		}
-
-		function AutoSlides() {
-			var i;
-
-			HideSlides();
-			slideIndex++;
-			if (slideIndex > slides.length) {slideIndex = 1}    
-				slides[slideIndex-1].style.display = "block";  
-			setTimeout(AutoSlides, 6000); // Change image every X seconds
-		}
+		document.addEventListener('scroll', function(e) {
+			var currentScrollPos = window.pageYOffset;
+				if (currentScrollPos <= 10) {
+					document.getElementById("navbar").style.top = "-50px";
+				} else {
+					document.getElementById("navbar").style.top = "0";
+				}
+				prevScrollpos = currentScrollPos;
+		});
 	</script>
 
 	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
