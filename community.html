@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>HMiamiWiki</title>
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+	<meta name="description" content="Hotline Miami Fan Wiki">
+	<meta name="keywords" content="wiki, hotline miami, fan project">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta http-equiv="Access-Control-Allow-Origin">
+	<link rel="stylesheet" href="./css/main.css">
+	
+	
+</head>
+<body>
+	<div class="main col-13">
+		<!--
+		<div class="sidebar">
+			
+		</div>
+		-->
+		<div id="Main" class="main">
+			<div id="navbar" class="header">
+				<a class="header_link" onclick="ChangeURL('./index.html')" >&emsp;Hotline Miami Wiki</a>
+				<div class="header_drop1">
+					<p>Explore</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./index.html')">Main Page</a>
+						<br/>
+						<a onclick="ChangeURL('./pages.html')">All Pages</a>
+						<br/>
+						<a onclick="ChangeURL('./community.html')">Community</a>
+						<br/>
+						<a onclick="ChangeURL('./developers.html')">Developers</a>
+					</div>
+				</div>
+
+				<div class="header_drop1">
+					<p>Content</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./characters.html')">Characters</a>
+						<br/>
+						<a onclick="ChangeURL('./weapons.html')">Weapons</a>
+						<br/>
+						<a onclick="ChangeURL('./masks.html')">Masks</a>
+						<br/>
+					</div>
+				</div>
+
+				<div class="header_drop1">
+					<p>About</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
+						<br/>
+						<a onclick="ChangeURL('./contact.html')">Contact</a>
+						<br/>
+					</div>
+				</div>
+				<p class="date" style="text-align: right;"></p>
+			</div>
+			<div class="col-13">
+				<div class="sideL col-4">
+					<p></p>
+				</div>
+				<div class="col-7">
+					<div class="col-7 banner">
+						<img class="img1" src="./img/logo1.webp" alt="Logo 1">
+					</div>
+					<div class="col-7 banner">
+						<br/>
+						<br/>
+						<br/>
+						<a class="index" onclick="ChangeURL('./index.html')" >&emsp;Hotline Miami Wiki</a>
+						<br/>
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10">
+							&nbsp;
+							<p>Explore</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('./index.html')">Main Page</a>
+								<br/>
+								<a onclick="ChangeURL('./pages.html')">All Pages</a>
+								<br/>
+								<a onclick="ChangeURL('./community.html')">Community</a>
+								<br/>
+								<a onclick="ChangeURL('./developers.html')">Developers</a>
+							</div>
+						</div>
+
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10" alt="">
+							&nbsp;
+							<p>Content</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('./characters.html')">Characters</a>
+								<br/>
+								<a onclick="ChangeURL('./weapons.html')">Weapons</a>
+								<br/>
+								<a onclick="ChangeURL('./masks.html')">Masks</a>
+								<br/>
+							</div>
+						</div>
+
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10">
+							&nbsp;
+							<p>About</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
+								<br/>
+								<a onclick="ChangeURL('./contact.html')">Contact</a>
+								<br/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sideR col-4">
+					<p></p>
+				</div>
+			</div>
+		
+			<div class="sideL col-2">
+				<p></p>
+			</div>
+			<div class="innerContent col-9">
+				<button type="button" title="Expand" class="expand" onclick="ExpandCanvas()"><img width="100%" src="./img/icons/expand_alt.png" alt="E"></img></button> 
+				<div class="innerContent2">
+					<div class="content1L col-9">
+						<h1>Home</h1>
+						<div class="gallery">
+							<div class="mainGallery">
+								<img src="./img/gallery1/1.webp" style="width:100%">
+							</div>
+							<div class="mainGallery">
+								<img src="./img/gallery1/2.webp" style="width:100%">
+							</div>
+							<div class="mainGallery">
+								<img src="./img/gallery1/3.webp" style="width:100%">
+							</div>
+							<div class="mainGallery">
+								<img src="./img/gallery1/4.webp" style="width:100%">
+							</div>
+							<div class="mainGallery">
+								<img src="./img/gallery1/5.webp" style="width:100%">
+							</div>
+							<div class="mainGallery">
+								<img src="./img/gallery1/6.webp" style="width:100%">
+							</div>
+							<a class="prev" onclick="plusSlides(-1)">❮</a>
+							<a class="next" onclick="plusSlides(1)">❯</a>
+						</div>
+					</div>
+					<div class="content1R col-5">
+						<div class="expWiki1">
+							<h3>Expanding the Wiki</h3>
+						</div>
+
+						<p class="expand">
+							Help to expand the wiki! Please create new pages and tell your friends about the game! 
+						</p>
+					</div>
+				</div>
+				<div class="innerContent2">
+					<div class="content1L col-9">
+						<div class="expWiki1">
+							<h3>About Game</h3>
+						</div>
+						<p class="about">
+							Hotline Miami is a high-octane action game overflowing with raw brutality, 
+							hard-boiled gunplay and skull crushing close combat. Set in an alternative 
+							1989 Miami, you will assume the role of a mysterious antihero on a murderous 
+							rampage against the shady underworld at the behest of voices on your answering 
+							machine. Soon you'll find yourself struggling to get a grip of what is going 
+							on and why you are prone to these acts of violence. Hotline Miami's sequel/prequel, 
+							Hotline Miami 2: Wrong Number was released on the 10th of March 2015, it features 
+							12 new playable characters as well as new weapons and levels and a level editor.
+						</p>
+						<img src="./img/HotlineMiami_Logo.webp" class="logo" alt="Hotline Miami Cover"></img>
+					</div>
+					<div class="content1R col-5">
+						<div class="expWiki1">
+							<h3>Devolver Digital</h3>
+						</div>
+						<br/>
+						<a class="twitter-timeline" data-height="640" data-theme="dark" href="https://twitter.com/devolverdigital?ref_src=twsrc%5Etfw">Tweets by devolverdigital</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+					</div>
+				</div>
+				<div class="innerContent2">
+					<div class="content1L col-9">
+						<div class="expWiki1">
+							<h3>Content</h3>
+						</div>
+						<br/>
+						<div style="display: inline-block; width:30%; align:center;">
+							<img src="./img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+							<br/>
+							<a href="#">Characters</a>
+						</div>
+						<div style="display: inline-block; width:30%; align:center;">
+							<img src="./img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+							<br/>
+							<a href="#">Characters</a>
+						</div>
+						<div style="display: inline-block; width:30%; align:center;">
+							<img src="./img/tonyMask.png" width="50%" style="margin-left:auto; margin-right:auto;"/>
+							<br/>
+							<a href="#">Characters</a>
+						</div>
+					</div>
+					<div class="content1R col-5">
+						<div class="expWiki1">
+							<h3>Dennaton Games</h3>
+						</div>
+						<br/>
+						<a class="twitter-timeline" data-height="640" data-theme="dark" href="https://twitter.com/dennaton?ref_src=twsrc%5Etfw">Tweets by Dennaton Games</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+					</div>
+				</div>
+			</div>
+			</div>
+			<div class="sideR col-2">
+			
+			</div>
+			<div class="footer col-13">
+				<p>Academic Project About Hotline Miami<br/>Web Development <a href="www.esat.es">ESAT</a><br/>Made by: <a href="./cv/index.html" target="blank">F. Javier Gimeno Ortiz</a> (student)<br>Images rights reserved to:<br>Dennation Games / Devolver Digital</p>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		/*Header Hider*/
+		var prevScrollpos = window.pageYOffset;
+		var mainContent = document.getElementsByClassName("main")[0];
+
+		document.addEventListener('scroll', function(e) {
+			var currentScrollPos = window.pageYOffset;
+				if (currentScrollPos <= 10) {
+					document.getElementById("navbar").style.top = "-50px";
+				} else {
+					document.getElementById("navbar").style.top = "0";
+				}
+				prevScrollpos = currentScrollPos;
+		});
+	</script>
+
+	<script type="text/javascript">
+		/*ImageGallery 1*/
+		
+		var slides = document.getElementsByClassName("mainGallery");
+		var slideIndex = Math.round(slides.length * Math.random());
+
+		showSlides(slideIndex);
+		AutoSlides();
+
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function HideSlides() {
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+		}
+
+		function showSlides(n) {
+			var i;
+		  
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			HideSlides();
+			slides[slideIndex-1].style.display = "block";
+		}
+
+		function AutoSlides() {
+			var i;
+
+			HideSlides();
+			slideIndex++;
+			if (slideIndex > slides.length) {slideIndex = 1}    
+				slides[slideIndex-1].style.display = "block";  
+			setTimeout(AutoSlides, 6000); // Change image every X seconds
+		}
+	</script>
+
+	<script language="JavaScript" type="text/javascript" src="js/jquery-3.6.4.min.js"></script>
+	<script language="JavaScript" type="text/javascript" src="js/main.js"></script>
+
+	<script>
+		DateHandler();
+	</script>
+</body>
+</html>

@@ -92,6 +92,7 @@ body {
 #navbar a:hover {
   background-color: #ddd;
   color: black;
+  /*border-bottom: 1px solid black;*/
 }
 
 .main_logo{
@@ -203,7 +204,7 @@ a.index:hover {
 }
 
 .header_link {
-	height:35%;
+	height:30%;
 }
 
 .header-drop1-content {

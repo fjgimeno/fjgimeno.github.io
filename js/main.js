@@ -7,6 +7,21 @@
 	var button = document.getElementsByClassName("pp_button")[0];
 }
 
+window.addEventListener('contextmenu', (event) => {
+  event.preventDefault()
+})
+
+window.addEventListener('mousedown', (event) => {
+	if( event.which == 2 ) {
+		event.preventDefault()	
+		console.log("Middle Button");
+	}
+	if( event.which == 0 ) {
+		event.preventDefault()	
+		console.log("Left Button");
+	}
+});
+
 function ManagePP() {
 	if(button == undefined)
 		button = document.getElementsByClassName("pp_button")[0];
@@ -26,8 +41,11 @@ function TogglePP() {
 	ManagePP();
 }
 
-function ChangeURL(url) {
-	document.location.href = url;
+function ChangeURL(url, mouseBtn) {
+	if(url == './cv/index.html' || ( mouseBtn != 'undefined' && mouseBtn.button == 1))
+		window.open(url, '_blank');
+	else
+		document.location.href = url;
 }
 
 /*Resizer Starts*/
