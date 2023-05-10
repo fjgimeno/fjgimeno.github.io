@@ -42,7 +42,7 @@ function TogglePP() {
 }
 
 function ChangeURL(url, mouseBtn) {
-	if(url == './cv/index.html' || ( mouseBtn != 'undefined' && mouseBtn.button == 1))
+	if(url == './cv/index.html'/* || ( mouseBtn != 'undefined' && mouseBtn.button == 1)*/)
 		window.open(url, '_blank');
 	else
 		document.location.href = url;
