@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\cv",
+    "\\cv\\img",
+    "\\img"
   ],
-  "SelectedNode": "\\masks.html",
+  "SelectedNode": "\\cv\\img\\centipede.png",
   "PreviewInSolutionExplorer": false
 }

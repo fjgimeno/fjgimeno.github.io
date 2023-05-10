@@ -209,5 +209,5 @@ function ShowOverlay(charname) {
 function HideOverlay() {
   //document.getElementById("content-overlay").style.display = "none";
   document.getElementById("content-overlay-bg").style.display = "none";
-  document.getElementsByClassName("main")[0].style.overflow = "scroll";
+  document.getElementsByClassName("main")[0].style.overflow = "auto";
 }
