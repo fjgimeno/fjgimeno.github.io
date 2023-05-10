@@ -186,3 +186,28 @@ function DateHandler() {
 
 	dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
 }
+
+function ShowOverlay(charname) {
+	//Variables:
+	var GFPageDesc = "Girlfriend, also referred to as The Girl in Dennis Wedin's artbook, is a supporting character in Hotline Miami. She is Jacket's girlfriend who he rescued from the Producer's villa in Decadence. <br><br> She is also heavily associated with Don Juan, sharing identical top down sprites. In Hotline Miami 2: Wrong Number, her role in Midnight Animal is played by Rachael Ward." + 
+					"<br><br>Prior to the events of Hotline Miami, Jacket had been dumped by one or more previous girlfriends, as Beard consoles him on the loss of one on April 23rd, 1986 and there's a stripped bed in Jacket's apartment during the early parts of Hotline Miami.";
+	
+	var GFPageEvents = "She is first seen in Chapter 3, Decadence, in the same room as the Producer, surrounded by cameras and appearing to have been drugged and abused, and perhaps struggling with a substance addiction which the Russian Mafia feeds to keep her in their grasp. After the Producer is killed by Jacket, she tells him to \"finish what he started\" and that she \"knew it would end like this.\" Instead of killing or abandoning her, Jacket rescues her, taking her to his apartment where she recuperates and then moves in permanently." +
+	"<br><br>She is referred to as Jacket's girlfriend, implying that they become romantically involved. After her arrival Jacket's flat becomes cleaner and new items are gradually added to the apartment, such as flowers on the kitchen table. She starts to sleep in the same room as Jacket in a bed of her own in Chapter 8." +
+	"<br><br>She is later killed by Richter, another masked assassin working for 50 Blessings. She was presumably killed either because she was a witness to Jacket's involvement with 50 Blessings, or simply because she was present when Richter appeared at the apartment to confront Jacket. Jacket later interrogates Richter at the police station and the player is given the option to strangle him or to spare him. Regardless, Richter is alive in Hotline Miami 2: Wrong Number.";
+  
+	//document.getElementById("content-overlay").style.display = "block";
+	  document.getElementById("content-overlay-bg").style.display = "block";
+	  document.getElementsByClassName("main")[0].style.overflow = "hidden";
+
+	  document.getElementsByClassName("content-overlay-left-content-description")[0].innerHTML = GFPageDesc;
+	  document.getElementsByClassName("content-overlay-left-content-events")[0].innerHTML = GFPageEvents;
+	  document.getElementsByClassName("content-overlay-content-tittle")[0].innerHTML = charname;
+	  document.getElementsByClassName("content-overlay-content-tittle")[1].innerHTML = charname;
+}
+
+function HideOverlay() {
+  //document.getElementById("content-overlay").style.display = "none";
+  document.getElementById("content-overlay-bg").style.display = "none";
+  document.getElementsByClassName("main")[0].style.overflow = "scroll";
+}
