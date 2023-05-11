@@ -12,24 +12,37 @@
 	<button onclick="OpenWindow2()">Ventana 2</button>
 	<button onclick="OpenWindow3()">Ventana 3</button>
 	<button onclick="OpenWindow4()">Ventana 4</button>
+	<button onclick="OpenWindow5()">Ventana 5</button>
+	<button onclick="OpenWindow6()">Ventana 6</button>
 
 	<script>
 		function OpenWindow1(){
-			window.open("http://www.esat.es");
+			window.open("http://www.google.es");
 		}
 
 		function OpenWindow2(){
-			window.open("http://www.esat.es","", "left=200, top=200, width=400, height=400");
+			window.open("http://www.google.es","", "width=400, height=400");
 		}
 
 		function OpenWindow3(){
 			var wind3 = window.open("","", "left=200, top=200, width=400, height=400");
-			wind3.document.write("<p>HOLA</p>"); 
+			wind3.document.write("<p>HOLA</p><>"); 
 		}
 
 		function OpenWindow4(){
 			var wind3 = window.open("","", "left=200, top=200, width=400, height=400");
 			wind3.document.write("<p>HOLA</p><br><form><input type='button' onclick='javascript:self.close()' value='Close'></input></form>"); 
+		}
+
+		function OpenWindow5(){
+			var wind3 = window.open("","", "width=512, height=512");
+			wind3.document.write("<img src='./img/gallery1/2.webp' width='512' height='512' style='margin:0; border: 0; padding:0; left:0; top: 0;'>"); 
+		}
+
+		function OpenWindow6(){
+			var n_index = Math.round(6 * Math.random()) + 1;
+			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
+			wind3.document.write("<img src='./img/gallery1/" + n_index + ".webp' width='720' height='405' style='margin:0; padding:0;'>");  
 		}
 	</script>
 </body>

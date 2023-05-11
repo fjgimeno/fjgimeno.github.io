@@ -11,7 +11,7 @@
 	<br>
 	<p class="date"></p>
 	<br>
-	<img src="./img/gallery1/1.jpg" width="720" height="405">
+	<img id="aleatImage" src="./img/gallery1/1.jpg" width="720" height="405">
 	<br>
 	<br>
 	<button onclick="OpenWindow1()">Imagen Fija</button>
@@ -54,6 +54,12 @@
 	</script>
 
 	<script>
+		var n_index = Math.round(6 * Math.random()) + 1;
+		var imag = document.getElementById("aleatImage");
+		imag.src = './img/gallery1/' + n_index + '.webp';
+	</script>
+
+	<script>
 		function OpenWindow1(){
 			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
 			wind3.document.write("<img src='./img/gallery1/2.jpg' width='720' height='405' style='margin:0; padding:0;'>"); 
@@ -62,7 +68,7 @@
 		function OpenWindow2(){
 			var n_index = Math.round(6 * Math.random()) + 1;
 			var wind3 = window.open("","", "left=200, top=200, width=720, height=405");
-			wind3.document.write("<img src='./img/gallery1/" + n_index + ".jpg' width='720' height='405' style='margin:0; padding:0;'>"); 
+			wind3.document.write("<img src='./img/gallery1/" + n_index + ".webp' width='720' height='405' style='margin:0; padding:0;'>"); 
 		}
 	</script>
 </body>
