@@ -23,7 +23,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <img src="/w3images/avatar_smoke.jpg" style="width:100%">
+  <img src="./img/jetpac.png" style="width:100%">
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -125,22 +125,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </div>
     </div>
 
+    <!--
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
       <i class="fa fa-download"></i> Download Resume
     </button>
-        
-    <!-- Testimonials -->
-    <!--
-    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
-    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
-    <p>John Doe saved us from a web disaster.</p><br>
-    
-    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
-    <p>No one is better than John Doe.</p>
     -->
-  <!-- End About Section -->
   </div>
   
   <!-- Portfolio Section -->
@@ -158,9 +147,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <div class="w3-half" style="text-align:center; align-content:center;">
         <img src="./img/asteroids.png" style="height:400px; border:1px solid white;" alt="Asteroids Remake">
         <h2>Asteroids Remake</h2>
-      </div>
-    <!-- End photo grid -->
+      </div>    
     </div>
+
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-half" style="text-align:center; align-content:center;">
+        <img src="./img/Jetpac.png" style="height:400px; border:1px solid white;" alt="Jetpac Remake">
+        <h2>Jetpac Remake</h2>
+      </div> 
+    </div>
+    <!-- End photo grid -->
   <!-- End Portfolio Section -->
   </div>
 
@@ -176,7 +172,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
+    <!-- -->
+    <form id="contactForm" action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
@@ -187,6 +184,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </button>
       </p>
     </form>
+    <!-- -->
   <!-- End Contact Section -->
   </div>
   
