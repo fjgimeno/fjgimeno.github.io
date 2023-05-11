@@ -447,6 +447,15 @@ content_gallery {
 	vertical-align:center;
 }
 
+.footer a {
+	text-decoration:none;
+	color: #BBBBBBFF;
+}
+
+.footer a:hover {
+	background-color: purple;
+}
+
 .img1 {
 	float:left;
 	height: 146px;
@@ -617,6 +626,11 @@ ul {
 		top: 45px;
 		left:0;
 		width:100%;
+	}
+
+	a {
+		text-decoration: none;
+		color:#BBBBBBFF;
 	}
 
 	.innerContent {
