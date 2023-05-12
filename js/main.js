@@ -275,3 +275,10 @@ function saveMessage(name, company, email, phone, message){
     message: message
   });
 }
+
+let containingElement = document.getElementById('content-overlay');
+document.body.addEventListener('click', function( event ){
+	if( !containingElement.contains( event.target ) ){
+		HideOverlay();
+	} 
+});

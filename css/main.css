@@ -734,3 +734,14 @@ ul {
   background-color: #888;
   border-radius: 5px;
 }
+
+.trending-table {
+	aspect-ratio: 1 / 1;
+	width:100%;
+}
+
+.trending-table tbody tr th {
+	align-content:center;
+	text-align:center;
+	vertical-align:top;
+}
