@@ -74,7 +74,7 @@ body {
 
 #navbar {
   position: fixed; /* Make it stick/fixed */
-  top: -50px; /* Stay on top */
+  top: -100px; /* Stay on top */
   /*width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
@@ -96,7 +96,7 @@ body {
 
 .index_member a {
 	text-decoration:none;
-	color:white;
+	color:black;
 }
 
 #content-overlay-bg {
