@@ -32,8 +32,6 @@
 					<div class="header-drop1-content">
 						<a onclick="ChangeURL('./index.html')">Main Page</a>
 						<br/>
-						<a onclick="ChangeURL('./community.html')">Community</a>
-						<br/>
 						<a onclick="ChangeURL('./developers.html')">Developers</a>
 					</div>
 				</div>
@@ -44,8 +42,6 @@
 						<a onclick="ChangeURL('./characters.html')">Characters</a>
 						<br/>
 						<a onclick="ChangeURL('./weapons.html')">Weapons</a>
-						<br/>
-						<a onclick="ChangeURL('./masks.html')">Masks</a>
 						<br/>
 					</div>
 				</div>
@@ -83,8 +79,6 @@
 							<div class="drop1-content">
 								<a onclick="ChangeURL('./index.html')">Main Page</a>
 								<br/>
-								<a onclick="ChangeURL('./community.html')">Community</a>
-								<br/>
 								<a onclick="ChangeURL('./developers.html')">Developers</a>
 							</div>
 						</div>
@@ -98,8 +92,6 @@
 								<a onclick="ChangeURL('./characters.html')">Characters</a>
 								<br/>
 								<a onclick="ChangeURL('./weapons.html')">Weapons</a>
-								<br/>
-								<a onclick="ChangeURL('./masks.html')">Masks</a>
 								<br/>
 							</div>
 						</div>
@@ -195,22 +187,28 @@
 							<h3>Content</h3>
 						</div>
 						<br/>
-						<div onclick="ChangeURL('./characters.html')" style="display: inline-block; width:32%; align:center; margin-left:0.9%;">
-							<img src="./img/characters/Richard.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
-							<br/>
-							<span >Characters</span>
-						</div>
-						<br><br><br><br>
-						<div onclick="ChangeURL('./weapons.html')" style="display: inline-block; width:32%; align:center; margin-left:0.9%;">
-							<img src="./img/characters/GirlfriendFace.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
-							<br/>
-							<span>Weapons</span>
-						</div>
-						<div onclick="ChangeURL('./developers.html')" style="display: inline-block; width:32%; align:center; margin-left:0.9%;">
-							<img src="./img/characters/Richard.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
-							<br/>
-							<span>Developers</span>
-						</div>
+						<table class="trending-table">
+							<tbody>
+								<tr>
+									<th class="trending-row" onclick="ChangeURL('./weapons.html')">
+										<img src="./img/weapons/Bat1.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
+										<br/>
+										<span>Weapons</span>
+									</th>
+									<th class="trending-row" onclick="ChangeURL('./characters.html')">
+										<img src="./img/characters/Richard.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
+										<br/>
+										<span>Characters</span>
+									</th>
+									<th class="trending-row" onclick="ChangeURL('./developers.html')">
+										<img src="./img/characters/TheSon.webp" width="50%" style="margin-left:auto; margin-right:auto;"/>
+										<br/>
+										<span >Developers</span>
+									</th>
+								</tr>
+							</tbody>
+						</table
+						<br>
 					</div>
 					<div class="content1R col-5">
 						<div class="expWiki1">
