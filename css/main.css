@@ -138,6 +138,12 @@ body {
 	text-align: justify;
 }
 
+#content-overlay-right {
+	overflow:auto;
+	height:100%;
+	width:340px;
+}
+
 #content-overlay-left p {
 	text-align: justify;
 	padding
