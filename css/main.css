@@ -38,10 +38,10 @@ body {
 } 
 
 #Main {
-	background-image: url('../img/background_4x_ws_2.jpg');
+	/*background-image: url('../img/background_4x.jpg');*/
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: auto 100%;
+	background-size: auto auto;
 	height:100%;
 }
 
@@ -65,7 +65,7 @@ body {
 	/*left:45px;*/
 	left:0;
 	background-color:#B74EFF;
-	color:black;
+	color:white;
 	height:45px;
 	right: 0;
 	border-bottom: 1px solid #660000FF;

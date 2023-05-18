@@ -505,6 +505,38 @@ document.body.addEventListener('click', function( event ){
 	} 
 });
 
+function RGBToHex(r, g, b) {
+	var rH = r.toString(16);
+	if(rH.lengths == 1)
+		rh = "0" + rh;
+	var gH = g.toString(16);
+	var bH = b.toString(16);
+
+	var hex = "#" + rH + "" + gH + "" + bH;
+	return hex;
+}
+
+{
+	var alpha = Math.round(100 * Math.random());;
+	var aDir = 1;	
+}
+
+window.setInterval(function(){
+	const fromColor = new THREE.Color("rgb(171, 0, 171)");
+	const destColor = new THREE.Color("rgb(0, 0, 171)");
+
+	if(alpha <= 0 || alpha >= 100)
+		aDir *= -1;
+
+	alpha += aDir;
+
+	var newColor = fromColor.lerp(destColor, alpha / 100.0);
+
+	var hex = "#" + newColor.getHexString();
+
+	document.body.style.backgroundColor = hex;
+}, 50);
+
 $( document ).ready(function() {
 	var width;
 
