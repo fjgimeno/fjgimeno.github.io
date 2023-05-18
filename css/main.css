@@ -37,6 +37,14 @@ body {
   background: #555;
 } 
 
+a:hover {
+	cursor:pointer;
+}
+
+.drop1 {
+	cursor:pointer;
+}
+
 #Main {
 	/*background-image: url('../img/background_4x.jpg');*/
 	background-repeat: no-repeat;

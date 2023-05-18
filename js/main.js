@@ -491,10 +491,7 @@ function ShowOverlay(charname) {
 		document.location.href = "./index.html";
 	});
 
-	document.getElementsByClassName("img1")[0].addEventListener('hover', function (e) {
-		//document.location.href = "./index.html";
-
-	});
+	document.getElementsByClassName("img1")[0].style.cursor = "pointer";
 }
 
 function HideOverlay() {
