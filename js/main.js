@@ -235,7 +235,7 @@ function RGBToHex(r, g, b) {
 	var aDir = 1;	
 }
 
-window.setInterval(function(){
+/*window.setInterval(*/function test(){
 	const fromColor = new THREE.Color("rgb(171, 0, 171)");
 	const destColor = new THREE.Color("rgb(0, 0, 171)");
 
@@ -248,8 +248,8 @@ window.setInterval(function(){
 
 	var hex = "#" + newColor.getHexString();
 
-	document.body.style.backgroundColor = hex;
-}, 50);
+	document.body.style.backgroundColor = hex;w
+}/*, 1000000);*/
 
 //https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 function CheckMobile() {

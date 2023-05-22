@@ -49,12 +49,42 @@ a:hover {
 	cursor:pointer;
 }
 
+body {
+	background: linear-gradient(45deg, #FCE588, #D84830, #3C0107, #0E0204);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	
+	25% {
+		background-position: 100% 50%
+	}
+	
+	50% {
+		background-position: 0% 50%;
+	}
+
+	75% {
+		background-position: -100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 #Main {
-	/*background-image: url('../img/background_4x.jpg');*/
+	width: 100vw;
+	height: 100vh;
+	background-image: url('../img/background_4x_TR.png');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: auto auto;
-	height:100%;
+	background-size: cover;
+	background-position: center;
 }
 
 .main {
@@ -683,7 +713,7 @@ ul {
 	}
 
 	.banner {
-		background
+		/*background*/
 	}
 
 	.sideL {
