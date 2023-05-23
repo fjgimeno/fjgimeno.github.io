@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Dynamic Content Example</title>
+        <title>Hotline Miami Wiki: Docs</title>
+        <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
         <style>
             body {
                 background-color:#444444;
+                font-size:14px;
             }
 
             /* CSS styles for header menu */
@@ -32,19 +34,27 @@
                 text-align: left;
                 color:white;
             }
+
+            li:hover {
+                cursor:pointer;
+            }
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 1px solid white;
+                padding: 8px;
+            }
         </style>
     </head>
 
     <body>
-        <div id="header">
-            <input type="button" onClick="document.getElementById('content').scrollIntoView();" value="Index"/>
-            <input type="button" onClick="document.getElementById('introduction').scrollIntoView();" value="Introduction"/>
-        </div>
-        <br>
-        <div>
+        <div style="text-align: center; align-content:center;">
             <img src="https://www.esat.es/wp-content/uploads/logo-esat-gif-animado-transparente.gif" width="410" height="auto" style="background-color:white">
             <h1>Web Development's Final Project</h1>
-            <table style="font-size: 20px;">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <table style="font-size: 20px; text-align: left; position:sticky;">
                 <tr>
                     <td width="200px;">Author</td>
                     <td>F. Javier Gimeno Ortiz</td>
@@ -71,29 +81,32 @@
                 </tr>
             </table>
         </div>
+        
         <hr>
         <div id="content">
             <h1>Hotline Miami Web Page Documentation</h1>
 
             <h2>Table of Contents:</h2>
 
-            <ul>
-                <li><h2>Introduction</h2>
+            <ol style="color: #CCCCCC">
+                <li><h2>Web Walkthrough</h2>
                     <ul>
-                        <li>Overview of the Hotline Miami Wiki</li>
-                        <li>Purpose and Objectives</li>
+                        <li onClick="document.getElementById('indpage').scrollIntoView();">Index Page</li>
+                        <li onClick="document.getElementById('charpage').scrollIntoView();">Characters Page</li>
+                        <li onClick="document.getElementById('contpage').scrollIntoView();">Contact Page</li>
+                        <li onClick="document.getElementById('devpage').scrollIntoView();">Developers Page</li>
+                        <li onClick="document.getElementById('rollpage').scrollIntoView();">Misc. Page</li>
                     </ul>
                 </li>
-                <li><h2>Getting Started</h2>
+                <li><h2 onClick="document.getElementById('overview').scrollIntoView();">Web Overview</h2>
                     <ul>
-                        <li>System Requirements</li>
-                        <li>Browser Compatibility</li>
+                        <li onClick="document.getElementById('requirements').scrollIntoView();">Browser Requirements</li>
                     </ul>
                 </li>
-                <li><h2>Navigation</h2>
+                <li><h2 onClick="document.getElementById('navigation').scrollIntoView();">Navigation</h2>
                     <ul>
-                        <li>Main Menu and Submenus</li>
-                        <li>Exploring Content Categories</li>
+                        <li onClick="document.getElementById('menues').scrollIntoView();">Main Menu and Submenus</li>
+                        <li onClick="document.getElementById('menues').scrollIntoView();">Exploring Content Categories</li>
                     </ul>
                 </li>
                 <li><h2>Features and Functionality</h2>
@@ -127,25 +140,313 @@
                         <li>Attribution for External Resources</li>
                     </ul>
                 </li>
-            </ul>
+            </ol>
             <br>
             <br>
             <hr>
             <br>
             <br>
-            <h1 id="introduction">Introduction</h1>
-            <hr>
-            <h2>Overview of the Hotline Miami Wiki</h2>
+            <h1 id="webpreview">Web Walkthrough</h1>
             <ul>
                 <li>
-                    The Hotline Miami Wiki is a comprehensive resource dedicated to providing detailed information about the critically acclaimed video game franchise, Hotline Miami. Developed by Dennaton Games, Hotline Miami is an intense top-down shooter series known for its fast-paced action, brutal gameplay, and captivating storyline. This wiki serves as a hub for fans and newcomers alike, offering a wealth of knowledge about the game's characters, missions, weapons, storylines, and more.
+                    <h3 id="indpage">Index Page</h3>
+                    - Header that only shows when scrolling down the page:
+                    <img src="./img/index4.png" width="100%">
+                    - Content:
+                    <img src="./img/index1.png" width="100%">
+                    <img src="./img/index2.png" width="100%">
+                    <img src="./img/index3.png" width="100%">
+                </li>
+                <li>
+                    <h3 id="charpage">Characters Page</h3>
+                    <img src="./img/char1.png" width="100%">
+                    <img src="./img/char2.png" width="100%">
+                    <img src="./img/char3.png" width="100%">
+                    - When the user clicks on to any enement that depicts a character, an overlay will open showing info on said character.
+                    <img src="./img/char4.png" width="100%">
+                </li>
+                <li>
+                    <h3 id="contpage">Contact Page</h3>
+                    - Due to time constraints, the form is non functional, so for now, it opens a local mail cliend instead.
+                    <img src="./img/contact1.png" width="100%">
+                </li>
+            </ul>
+            <hr>
+            <br>
+            <h1 id="overview">Web Overview</h1>
+            <h2 id="requirements">Browser Requirements</h2>
+            <ul>
+                <li>
+                    Javascript enabled: This Webpage relies heavilly on JavaScript, without it, it will not work.
+                </li>
+                <li>
+                    Due to previous reasons, the web may perform poorly on low end hardware, specially notable on lower end phones.
+                </li>
+                <li>
+                    Good internet connection: Due to the vast quantity of images that need to be downloaded, a good connection is required.
+                </li>
+                <li>
+                    Compatible with all the major browsers.
+                </li>
+            </ul>
+            <hr>
+            <h2 id="menues">Menu</h2>
+            <ul>
+                <li>
+                    <h3>Header Menu Guide</h3>
+                    <img src="./img/menu1.png" width="100%">
+                    <p>To navigate this menu, you should do as follows:</p>
                     <ul>
-                        <li>
-                            
+                        <li>If you want to go back to the main page, click on the text that says "Hotline Miami Wiki".</li>
+                        <li>If instead, you want to go to any other page, hover your mouse over any of the three categories, and then click on the you're interested on.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Header Menu Technical Info</h3>
+                    <!--<img src="./img/menu1.png">-->
+                    <p>The Menu was built as follows</p>
+                    <ul>
+                        <li>Menu itself is a 'div' element that has an id value of 'navbar' and a class value of 'header'</li>
+                        <li>Said div contains:
+                            <ul>
+                                <li>A link element that calls 'ChangeURL()' javascript function, it is used as a link to the main page.</li>
+                                <li>A div element used as a collapsable menu, it containt the links to other webpages on the site, this element is quite similar to the parent one, the only difference being the stylesheet addressed to it.</li>
+                                <li>A p element used to hold the current date of the system, managed by JS (more on that later).</li>
+                            </ul>
+                        </li>
+                        <li>There are actually two headers in my page, one that stays at the top of it, and one that moves with the window x scroll value, both of them work the same way, except for the addition of a javascript function that hides or shows the other header.</li>
+                        <li>Javascript Functions used
+                            <ul>
+                                <li>
+                                    <img src="./img/code/hider.png" width="100%">
+                                    <p>This is the code that hides/shows the second header when the user scrolls.</p>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>var prevScrollpos = window.pageYOffset;</td>
+                                            <td>This line declares a variable <code>prevScrollpos</code> and assigns it the initial vertical scroll position of the page.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>var mainContent = document.getElementsByClassName("main")[0];</td>
+                                            <td>This line selects the first element with the class name "main" and assigns it to the variable <code>mainContent</code>. It assumes there is at least one element with the class name "main" in the document.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>document.addEventListener('scroll', function(e) { ... });</td>
+                                            <td>This line adds an event listener to the document for the "scroll" event. When the user scrolls, the function defined within the curly braces <code>{ ... }</code> will be executed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>var currentScrollPos = window.pageYOffset;</td>
+                                            <td>Inside the scroll event function, this line retrieves the current vertical scroll position of the page and assigns it to the variable <code>currentScrollPos</code>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>if (currentScrollPos <= 10) { ... } else { ... }</td>
+                                            <td>This conditional statement checks if the <code>currentScrollPos</code> is less than or equal to 10 pixels. If it is, the code block within the first set of curly braces <code>{ ... }</code> is executed. Otherwise, the code block within the second set of curly braces <code>{ ... }</code> is executed.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>document.getElementById("navbar").style.top = "-50px";</td>
+                                            <td>If the scroll position is less than or equal to 10 pixels, this line sets the <code>top</code> CSS property of the element with the id "navbar" to "-50px". This effectively hides the header by moving it above the visible portion of the page.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>document.getElementById("navbar").style.top = "0";</td>
+                                            <td>If the scroll position is greater than 10 pixels, this line sets the <code>top</code> CSS property of the element with the id "navbar" to "0". This brings the header back to its original position, making it visible again.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>prevScrollpos = currentScrollPos;</td>
+                                            <td>Finally, this line updates the <code>prevScrollpos</code> variable with the current scroll position, so it can be used in the next scroll event to track the previous scroll position.</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </li>
+                                <li>
+                                    <img src="./img/code/date.png" width="100%">
+                                    <p>This is the code that updates the date on the header</p>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>function DateHandler() { ... }</td>
+                                            <td>This is the declaration of a function named <code>DateHandler</code>.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>let dateP = document.getElementsByClassName("date")[0];</td>
+                                            <td>This line declares a variable <code>dateP</code> and assigns it the first element with the class name "date". It assumes there is at least one element with the class name "date" in the document.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>const date = new Date();</td>
+                                            <td>This line creates a new <code>Date</code> object and assigns it to the constant variable <code>date</code>. This object represents the current date and time.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>let months = new Array();</td>
+                                            <td>This line declares a variable <code>months</code> and initializes it as an empty array.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>months[0] = "January";</td>
+                                            <td>This line assigns the string "January" to the first element of the <code>months</code> array.</td>
+                                        </tr>
+                                        <!-- Repeat the above line for each month until months[11] = "December" -->
+                                        <tr>
+                                            <td>let days = new Array();</td>
+                                            <td>This line declares a variable <code>days</code> and initializes it as an empty array.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>days[0] = "Sunday";</td>
+                                            <td>This line assigns the string "Sunday" to the first element of the <code>days</code> array.</td>
+                                        </tr>
+                                        <!-- Repeat the above line for each day until days[6] = "Saturday" -->
+                                        <tr>
+                                            <td>dateP.innerHTML = "Today is " + days[date.getDay()] + ", " + date.getDate() + " of " + months[date.getMonth()] + " of " + date.getFullYear() + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";</td>
+                                            <td>This line sets the HTML content of the element referenced by <code>dateP</code>. It creates a formatted string that displays the current date, including the day of the week, day of the month, month, and year.</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </li>
+                                <li>
+                                    <img src="./img/code/url.png" width="100%">
+                                    <p>This is the code that changes the document page.</p>
+                                    <table>
+                                        <tr>
+                                            <th>Code</th>
+                                            <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                            <td>ChangeURL(url, mouseBtn)</td>
+                                            <td>This function is used to change the URL of the current page based on the provided parameters.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>url == "random"</td>
+                                            <td>If the URL parameter is set to "random", a random page will be chosen to navigate to.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Math.round(5 * Math.random())</td>
+                                            <td>This expression generates a random number between 1 and 5.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>case 1:</td>
+                                            <td>If the random number is 1, the page will be redirected to './characters.html'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>case 2:</td>
+                                            <td>If the random number is 2, the page will be redirected to './weapons.html'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>case 3:</td>
+                                            <td>If the random number is 3, the page will be redirected to './contact.html'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>case 4:</td>
+                                            <td>If the random number is 4, the page will be redirected to './index.html'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>case 5:</td>
+                                            <td>If the random number is 5, the page will be redirected to './roll.html'.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>url == './cv/index.html'</td>
+                                            <td>If the URL parameter is './cv/index.html', a new browser window/tab will be opened with the specified URL.</td>
+                                        </tr>
+                                        <!-- <tr>
+                                            <td>( mouseBtn != 'undefined' && mouseBtn.button == 1)</td>
+                                            <td>This condition is currently commented out.</td>
+                                        </tr> -->
+                                        <tr>
+                                            <td>window.open(url, '_blank')</td>
+                                            <td>This function opens the specified URL in a new browser window/tab.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>else</td>
+                                            <td>If none of the above conditions are met, the page will be redirected to the specified URL.</td>
+                                        </tr>
+                                    </table>
+                                    <br>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>
+                <br>
+                <hr>
+                <br>
+                <h1>Page Other Functions</h1>
+                <li>
+                    <h3>Page expand Button</h3>
+                    <p>
+                        Every page has a button on the top left corner that is used to expant the canvas of the webpage, basically giving it a zoom like effect.
+                        to deal with this, another javascript function was used, said function works as follows:
+                    </p>
+                    <img src="./img/code/ecanvas.png" width="100%">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>function ExpandCanvas()</td>
+                            <td>This function is used to expand or collapse the canvas element based on certain conditions.</td>
+                        </tr>
+                        <tr>
+                            <td>(expanded == false || (width '<'= 1400 && resizing == true)) || disableButton</td>
+                            <td>This condition checks if either the variable <code>expanded</code> is false or if the width of the canvas is less than or equal to 1400 pixels and the <code>resizing</code> variable is true. It also checks if the <code>disableButton</code> variable is true.</td>
+                        </tr>
+                        <tr>
+                            <td>expanded = true;</td>
+                            <td>If the condition is met, the <code>expanded</code> variable is set to true.</td>
+                        </tr>
+                        <tr>
+                            <td>sideL.style.width = "2.5%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideL" to "2.5%".</td>
+                        </tr>
+                        <tr>
+                            <td>sideR.style.width = "2.5%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideR" to "2.5%".</td>
+                        </tr>
+                        <tr>
+                            <td>canvas.style.width = "95%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "canvas" to "95%".</td>
+                        </tr>
+                        <tr>
+                            <td>else if (resizing == false)</td>
+                            <td>If the first condition is not met, this condition checks if the <code>resizing</code> variable is false.</td>
+                        </tr>
+                        <tr>
+                            <td>expanded = false;</td>
+                            <td>If the second condition is met, the <code>expanded</code> variable is set to false.</td>
+                        </tr>
+                        <tr>
+                            <td>sideL.style.width = "16.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideL" to "16.66%".</td>
+                        </tr>
+                        <tr>
+                            <td>sideR.style.width = "16.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideR" to "16.66%".</td>
+                        </tr>
+                        <tr>
+                            <td>canvas.style.width = "66.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "canvas" to "66.66%".</td>
+                        </tr>
+                    </table>
+                    <br>                      
+                </li>
+                <li>
+                    <h3>Main Page Gallery</h3>
+                    <p>
+                        For the creation of the gallery seen on the main page, i decided to modify an existing code from W3Schools to accomodate my needs.
+                        Said code can be found <a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp">Here</a>, thats why I won't get into much details,
+                        that being said, my main changes where the removal of the bar with the image previews, and the addition to randomize the starting image.                    
+                    <br>                      
+                </li>
+                <li>
+                    <h3>Twitter Feed</h3>
+                    <p>
+                        I also decided to embed the Twitter feed of the developers into the page, this was done following the instructions on <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed">this</a> webpage.                   
+                    <br>                      
+                </li>
             </ul>
         </div>
+        <button onClick="document.getElementById('content').scrollIntoView();" style="position:fixed; right: 50px; bottom:50px; height:50px; width:50px;"><img src="https://seekicon.com/free-icon-download/back-to-top_1.svg"></button>>
     </body>
 </html>

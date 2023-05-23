@@ -44,7 +44,7 @@ function TogglePP() {
 function ChangeURL(url, mouseBtn) {
 	if(url == "random")
 	{
-		switch(Math.round(4 * Math.random()))
+		switch(Math.round(5 * Math.random()))
 		{
 			case 1:
 				document.location.href = './characters.html';
@@ -57,6 +57,9 @@ function ChangeURL(url, mouseBtn) {
 				break;
 			case 4:
 				document.location.href = './index.html';
+				break;
+			case 5:
+				document.location.href = './roll.html';
 				break;
 		}
 	}
@@ -235,9 +238,9 @@ function RGBToHex(r, g, b) {
 	var aDir = 1;	
 }
 
-/*window.setInterval(*/function test(){
-	const fromColor = new THREE.Color("rgb(171, 0, 171)");
-	const destColor = new THREE.Color("rgb(0, 0, 171)");
+window.setInterval(function(){
+	const fromColor = new THREE.Color("rgb(220, 192, 147)");
+	const destColor = new THREE.Color("rgb(0, 0, 147)");
 
 	if(alpha <= 0 || alpha >= 100)
 		aDir *= -1;
@@ -248,8 +251,8 @@ function RGBToHex(r, g, b) {
 
 	var hex = "#" + newColor.getHexString();
 
-	document.body.style.backgroundColor = hex;w
-}/*, 1000000);*/
+	document.body.style.backgroundColor = hex;
+}, 50);
 
 //https://stackoverflow.com/questions/11381673/detecting-a-mobile-browser
 function CheckMobile() {

@@ -1,0 +1,195 @@
+﻿<?php
+if($_POST["message"]) {
+mail("gimenoor@esat-alumni.com", "About HMiami Wiki",
+$_POST["insert your message here"]. "From: an@email.address");
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>HMiamiWiki</title>
+	<link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="F.Javier Gimeno Ortiz">
+	<meta name="owner" content="F.Javier Gimeno Ortiz">
+	<meta name="description" content="Hotline Miami Fan Wiki">
+	<meta name="keywords" content="wiki, hotline miami, fan project">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<a href="https://es.linkedin.com/in/francisco-javier-gimeno-ortiz-963379138/" style="position:fixed; width: 25px; height: 25px; right: 25px; bottom: 25px; z-index:99;"> <img src="./img/icons/linkedin.png" alt="LinkedIn" width="25px" height="25px"></a>
+	<div class="main col-13">
+		<!--
+		<div class="sidebar">
+			
+		</div>
+		-->
+		<div id="Main" class="main">
+			<div id="navbar" class="header">
+				<a class="header_link" onclick="ChangeURL('./index.html')" >&emsp;Hotline Miami Wiki</a>
+				<div class="header_drop1">
+					<p>Explore</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('random')">Random Page</a>
+						<br/>
+						<a onclick="ChangeURL('./developers.html')">Developers</a>
+					</div>
+				</div>
+
+				<div class="header_drop1">
+					<p>Content</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./characters.html')">Characters</a>
+						<br/>
+						<a onclick="ChangeURL('./weapons.html')">Weapons</a>
+						<br/>
+					</div>
+				</div>
+
+				<div class="header_drop1">
+					<p>About</p>
+					<div class="header-drop1-content">
+						<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
+						<br/>
+						<a onclick="ChangeURL('./contact.html')">Contact</a>
+						<br/>
+					</div>
+				</div>
+				<p class="date" style="text-align: right;"></p>
+			</div>
+			<div class="col-13">
+				<div class="sideL col-4">
+					<p></p>
+				</div>
+				<div class="col-7">
+					<div class="col-7 banner">
+						<img class="img1" src="./img/logo1.webp" alt="Logo 1">
+					</div>
+					<div class="col-7 banner">
+						<br/>
+						<br/>
+						<br/>
+						<a class="index" onclick="ChangeURL('./index.html')" >&emsp;Hotline Miami Wiki</a>
+						<br/>
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10">
+							&nbsp;
+							<p>Explore</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('random')">Random Page</a>
+								<br/>
+								<a onclick="ChangeURL('./developers.html')">Developers</a>
+							</div>
+						</div>
+
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10" alt="">
+							&nbsp;
+							<p>Content</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('./characters.html')">Characters</a>
+								<br/>
+								<a onclick="ChangeURL('./weapons.html')">Weapons</a>
+								<br/>
+							</div>
+						</div>
+
+						<div class="drop1">
+							&nbsp;
+							<img src="./img/icons/book.webp" height="10">
+							&nbsp;
+							<p>About</p>
+							<div class="drop1-content">
+								<a onclick="ChangeURL('./cv/index.html')">Who am I</a>
+								<br/>
+								<a onclick="ChangeURL('./contact.html')">Contact</a>
+								<br/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sideR col-4">
+					<p></p>
+				</div>
+			</div>
+		
+			<div class="sideL col-2">
+				<p></p>
+			</div>
+			<div class="innerContent col-9">
+				<button type="button" title="Expand" class="expand" onclick="ExpandCanvas()"><img width="100%" src="./img/icons/expand_alt.png" alt="E"></button> 
+				<div class="innerContent2">
+					<div class="content1R col-5" >
+						<div class="expWiki1">
+							<h3>Get Rick Rolled</h3>
+						</div>
+						<video controls autoplay muted width="100%" height="100%">
+							<source src="./vid/roll.mp4" type="video/mp4">
+							<source src="./vid/roll.off" type="video/ogg">
+							Your browser does not support the video tag.
+						</video> 
+					</div>
+				</div>
+			</div>
+			<div class="sideR col-2">
+			</div>
+		</div>
+		<div class="footer col-13">
+			<p>Academic Project About Hotline Miami<br/>Web Development <a href="http://www.esat.es" target="_blank">ESAT</a><br/>Made by: <a href="./cv/index.html" target="blank">F. Javier Gimeno Ortiz</a> (student)<br>Images rights reserved to:<br>Dennation Games / Devolver Digital</p>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		/*Header Hider*/
+		var prevScrollpos = window.pageYOffset;
+		var mainContent = document.getElementsByClassName("main")[0];
+		
+		var isFirefox = typeof InstallTrigger !== 'undefined';
+		var width;
+
+		{
+			if(!isFirefox) {
+				width = $(document).width();
+			}
+			else {
+				width = window.innerWidth;
+			}
+		}
+
+		document.addEventListener('scroll', function(e) {
+			var currentScrollPos = window.pageYOffset;
+			if(width > 730)
+			{
+				if (currentScrollPos <= 10) {
+					document.getElementById("navbar").style.top = "-50px";
+				} else {
+					document.getElementById("navbar").style.top = "0";
+				}
+			} else 
+			{
+				if (currentScrollPos <= 10) {
+					document.getElementById("navbar").style.top = "-100px";
+				} else {
+					document.getElementById("navbar").style.top = "0";
+				}
+			}
+			prevScrollpos = currentScrollPos;
+		});
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
+	<script  src="./js/jquery-3.6.4.min.js"></script>
+	<script  src="./js/main.js"></script>
+
+	<script>
+		DateHandler();
+	</script>
+</body>
+</html>

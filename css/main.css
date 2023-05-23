@@ -49,46 +49,13 @@ a:hover {
 	cursor:pointer;
 }
 
-body {
-	background: linear-gradient(45deg, #FCE588, #D84830, #3C0107, #0E0204);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	
-	25% {
-		background-position: 100% 50%
-	}
-	
-	50% {
-		background-position: 0% 50%;
-	}
-
-	75% {
-		background-position: -100% 50%
-	}
-
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-#Main {
-	width: 100vw;
-	height: 100vh;
+.main {
 	background-image: url('../img/background_4x_TR.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-}
-
-.main {
-	overflow: auto;
+	background-attachment: fixed;
+	/*overflow: auto;
 	/*width:calc(100% - 45px);*/
 	width:100%;
 	height:100%;
