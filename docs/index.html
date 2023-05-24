@@ -441,6 +441,180 @@
                     <br>                      
                 </li>
             </ul>
+            <hr>
+            <h2 id="char">Characters / Weapons</h2>
+            <ul>
+                <li>
+                    <h3>Content Access Guide</h3>
+                    <p>To access the information, you should do as follows:</p>
+                    <ul>
+                        <li>Locate the element you're interested in gathering information, then click on it.</li>
+                        <li>A new window should open, with character information and a button to close the window on the top left.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Page Technical Info</h3>
+                    <!--<img src="./img/menu1.png">-->
+                    <p>The Page was built as follows</p>
+                    <ul>
+                        <li>Starts with a hidden div that contains the character info with default values on it (no actual character info untill changed by JS)</li>
+                        <li>Said div contains:
+                            <ul>
+                                <li>A div element that occupies 340px less than the maximum width that floats to the left of the screen.</li>
+                                <div>Said element contains p (paragraph) elemenents that are dynamically created by javaScript.</div>
+                                <li>A div element that occupies 340px that floats to the right of the screen.</li>
+                                <div>Said element contains a table with useful information about the element clicked before.</div>
+                            </ul>
+                        </li>
+                        <li>Javascript Functions used
+                            <ul>
+                                <li>
+                                    <img src="./img/code/char.png" width="100%">
+                                    <p>This is the code that shows the character overlay window when the used clicks on elements that holds this function.</p>
+                                    <table>
+                                        <tr>
+                                              <th>Function</th>
+                                              <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                              <td>ShowOverlay(charname)</td>
+                                              <td>Displays an overlay with information for the specified character.</td>
+                                        </tr>
+                                    </table>
+
+                                    <h3>JavaScript Code:</h3>
+                                    <table>
+                                        <tr>
+                                          <th>Variable</th>
+                                          <th>Description</th>
+                                        </tr>
+                                        <tr>
+                                          <td>GFPageDesc</td>
+                                          <td>Description for the character "Girlfriend".</td>
+                                        </tr>
+                                        <tr>
+                                          <td>GFPageEvents</td>
+                                          <td>Events related to the character "Girlfriend".</td>
+                                        </tr>
+                                        <tr> 
+                                            <td>ElementDesc</td>
+                                            <td>Desription relative to a element, character or weapon</td>
+                                        </tr>
+                                        <tr> 
+                                            <td>ElementDesc</td>
+                                            <td>Events relative to a character</td>
+                                        </tr>
+                                        <tr>
+                                          <td>BaseballBatDesc</td>
+                                          <td>Description for the baseball bat weapon.</td>
+                                        </tr>
+                                        <tr>
+                                          <td>BaseballBatStats</td>
+                                          <td>Statistics for the baseball bat weapon.</td>
+                                        </tr>
+                                      </table>
+
+                                      <h3>Functionality:</h3>
+                                      <ol>
+                                        <li>Displays the overlay and sets the background to be visible.</li>
+                                        <li>Hides the scrollbars of the main content.</li>
+                                        <li>Sets the overlay title to the specified character name.</li>
+                                        <li>Retrieves the table cells in the overlay.</li>
+                                        <li>Switches based on the character name:</li>
+                                        <ol type="a">
+                                          <li>For the character "Girlfriend":</li>
+                                          <ul>
+                                            <li>Sets the description and events for "Girlfriend".</li>
+                                            <li>Sets the image source to the face of "Girlfriend".</li>
+                                            <li>Updates the table cells with specific information about "Girlfriend".</li>
+                                          </ul>
+                                          <li>Case statements for other character names are added here.</li>
+                                        </ol>
+                                      </ol>
+                                    <br>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <hr>
+                <br>
+                <h1>Page Other Functions</h1>
+                <li>
+                    <h3>Page expand Button</h3>
+                    <p>
+                        Every page has a button on the top left corner that is used to expant the canvas of the webpage, basically giving it a zoom like effect.
+                        to deal with this, another javascript function was used, said function works as follows:
+                    </p>
+                    <img src="./img/code/ecanvas.png" width="100%">
+                    <table>
+                        <tr>
+                            <th>Code</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>function ExpandCanvas()</td>
+                            <td>This function is used to expand or collapse the canvas element based on certain conditions.</td>
+                        </tr>
+                        <tr>
+                            <td>(expanded == false || (width '<'= 1400 && resizing == true)) || disableButton</td>
+                            <td>This condition checks if either the variable <code>expanded</code> is false or if the width of the canvas is less than or equal to 1400 pixels and the <code>resizing</code> variable is true. It also checks if the <code>disableButton</code> variable is true.</td>
+                        </tr>
+                        <tr>
+                            <td>expanded = true;</td>
+                            <td>If the condition is met, the <code>expanded</code> variable is set to true.</td>
+                        </tr>
+                        <tr>
+                            <td>sideL.style.width = "2.5%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideL" to "2.5%".</td>
+                        </tr>
+                        <tr>
+                            <td>sideR.style.width = "2.5%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideR" to "2.5%".</td>
+                        </tr>
+                        <tr>
+                            <td>canvas.style.width = "95%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "canvas" to "95%".</td>
+                        </tr>
+                        <tr>
+                            <td>else if (resizing == false)</td>
+                            <td>If the first condition is not met, this condition checks if the <code>resizing</code> variable is false.</td>
+                        </tr>
+                        <tr>
+                            <td>expanded = false;</td>
+                            <td>If the second condition is met, the <code>expanded</code> variable is set to false.</td>
+                        </tr>
+                        <tr>
+                            <td>sideL.style.width = "16.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideL" to "16.66%".</td>
+                        </tr>
+                        <tr>
+                            <td>sideR.style.width = "16.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "sideR" to "16.66%".</td>
+                        </tr>
+                        <tr>
+                            <td>canvas.style.width = "66.66%";</td>
+                            <td>This line sets the <code>width</code> CSS property of the element with the id "canvas" to "66.66%".</td>
+                        </tr>
+                    </table>
+                    <br>                      
+                </li>
+                <li>
+                    <h3>Main Page Gallery</h3>
+                    <p>
+                        For the creation of the gallery seen on the main page, i decided to modify an existing code from W3Schools to accomodate my needs.
+                        Said code can be found <a href="https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp">Here</a>, thats why I won't get into much details,
+                        that being said, my main changes where the removal of the bar with the image previews, and the addition to randomize the starting image.                    
+                    <br>                      
+                </li>
+                <li>
+                    <h3>Twitter Feed</h3>
+                    <p>
+                        I also decided to embed the Twitter feed of the developers into the page, this was done following the instructions on <a href="https://help.twitter.com/en/using-twitter/embed-twitter-feed">this</a> webpage.                   
+                    <br>                      
+                </li>
+            </ul>
             <ul>
                 <h2 id="biblio">Bibliography</h2>
                 <li>
