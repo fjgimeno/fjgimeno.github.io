@@ -1,0 +1,302 @@
+/*taxi tavernes*/
+
+@import url('https://fonts.googleapis.com/css?family=Carrois+Gothic+SC');
+
+.h1, h1 {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 34px;
+    color: #5f5f5f;
+}
+.h2, h2 {
+    font-size: 28px;
+    color: #5f5f5f;
+    font-family: 'Carrois Gothic SC', sans-serif;
+}
+p.grid {
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 2.02em;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: url(/Media/taxitavernes/dayvo/FondoTaxi.jpg) center fixed;
+    background-size: cover;
+}
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom: 4px solid #828282;
+    margin-left: -17px;
+    margin-right: -17px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #c95353;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #c2c2c2;
+    background-color: transparent;
+}
+
+.well {
+    min-height: 20px;
+    padding: 35px;
+    margin-bottom: 70px;
+    background-color: rgba(194, 194, 194, 0.16);
+    border: ridge rgba(130, 130, 130, 0.47);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+a {
+    color: #a58c5b;
+    text-decoration: none;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgb(255, 255, 255);
+   
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+footer.zone-footer {
+    background: #ffffff;
+    border-top: ridge 3px #999999;
+    margin-top: 45px;
+}
+.layout-footer {
+    margin-top: 20px;
+    background: #ffffff;
+    font-size: .8em;
+}
+.btn-success {
+    color: #ffffff;
+    background-color: #921a1c;
+    border-color: #c95353;
+    border: ridge;
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+    font-size: 19px;
+}
+.btn-success.active, .btn-success:active, .btn-success:hover, .open>.btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #c2c2c2;
+    border-color: #c2c2c2;
+}
+.btn-success.active, .btn-success:active, .btn-success:hover, .open>.btn-success.dropdown-toggle {
+    color: #bd5050;
+    background-color: #f5f5f5;
+    border-color: #c2c2c2;
+}
+.btn-success.active.focus, .btn-success.active:focus, .btn-success.active:hover, .btn-success:active.focus, .btn-success:active:focus, .btn-success:active:hover, .open>.btn-success.dropdown-toggle.focus, .open>.btn-success.dropdown-toggle:focus, .open>.btn-success.dropdown-toggle:hover {
+    color: #fff;
+    background-color: #d46d6f;
+    border-color: #d46d6f;
+}
+.btn-success.focus, .btn-success:focus {
+    color: #fff;
+    background-color: #da9899;
+    border-color: #da9899;
+}
+
+
+
+.btn-success {
+    color: #656565;
+    background-color: #f9d38a;
+    border-color: #c95353;
+    border: ridge;
+    padding: 10px;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-variant: small-caps;
+    font-size: 25px;
+}
+.btn-success.active, .btn-success:active, .btn-success:hover, .open>.btn-success.dropdown-toggle {
+    color: #e8b592;
+    background-color: #efefef;
+    border-color: #c2c2c2;
+}
+.cc-cookies a.cc-cookie-accept, .cc-cookies-error a.cc-cookie-accept, .cc-cookies a.cc-cookie-decline, .cc-cookies-error a.cc-cookie-decline, .cc-cookies a.cc-cookie-reset {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    background: #a58c5b;
+    padding: 0.5em 0.75em;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.35);
+    -o-transition: background 0.5s ease-in;
+    -webkit-transition: background 0.25s ease-in;
+    -moz-transition: background 0.25s ease-in;
+}
+@media only screen and (max-device-width: 760px){
+.navbar-header {
+    background: #fff;
+}
+}
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+button.snip0072 {
+  font-family: 'Raleway', Arial, sans-serif;
+  border: none;
+  background-color: #000000;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  padding: 20px 40px;
+  display: inline-block;
+  margin: 15px 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+button.snip0072:before {
+  border-radius: 3px;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  bottom: 50%;
+  background-color: #ffffff;
+  border-top: 2px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+
+button.snip0072.hover {
+  color: #ffffff;
+  -webkit-animation: flashText 0.5s;
+  animation: flashText 0.5s;
+}
+
+
+button.snip0072.hover:before {
+  top: 15%;
+  bottom: 15%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
+}
+
+button.snip0072:active:before {
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+button.snip0072.blue {
+    background-color: rgba(56, 56, 56, 0.82);
+}
+
+
+@-webkit-keyframes flashText {
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes flashText {
+  0% {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+
+
+
+
+hr {
+    margin-top: 45px;
+    margin-bottom: 50px;
+    border: 0;
+    border-top: 50px solid rgba(106, 106, 106, 0.85);
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+a.forjavascript {
+    color: #5e5e5e;
+    font-size: 20px;
+    transition: all 2s ease;
+    margin-left: 36px;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    padding-right: 28px;
+}
+a.inicio {
+    color: #5e5e5e;
+    font-size: 20px;
+    transition: all 2s ease;
+    margin-left: 36px;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    padding-right: 28px;
+}
+
+li.menuUserName {
+    display: none;
+}
+
+img.logo {
+    margin-top: 60px;
+    margin-bottom: -30px;
+}
+.col-sm-5.telefonos {
+    margin-top: 39px;
+}
+.col-sm-3.etiquetas {
+    margin-top: 38px;
+}
+.telf {
+    font-size: 28px;
+}
+p.correo {
+    font-size: 2em;
+}
+.credits {
+    margin-top: 29px;
+    text-align: center;
+}
+
+.breadcrumb {
+    display: none;
+}
