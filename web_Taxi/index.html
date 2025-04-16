@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of the page">
+    <meta name="author" content="Your Name">
+    <title>Tele-Taxi</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        .title-section {
+            display: flex;
+            flex-direction: column; /* Stack items vertically */
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center; /* Center items horizontally */
+            position: relative;
+            height: 100vh; /* Set height to match the viewport height */
+            color: blue;
+            text-align: center;
+            overflow: hidden; /* Ensure no overflow from images */
+            padding-top: 0; /* Remove extra padding */
+        }
+
+        .title-section h1 {
+            font-size: 4rem; /* Increase font size for the title */
+            font-weight: bold;
+            font-family: 'Arial Black', 'Arial', sans-serif; /* Use a professional font */
+            color: #FFD700; /* Gold color for a premium look */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow for better visibility */
+            width: 100%; /* Make the title span the full width */
+            text-align: center; /* Center the text */
+            margin: 0; /* Remove default margin */
+        }
+
+        .title-section .subtitles {
+            display: flex;
+            justify-content: space-between; /* Space out the left and right sections */
+            align-items: center; /* Align items vertically to the center */
+            position: absolute; /* Position the subtitles absolutely within the title-section */
+            top: 50%; /* Move the subtitles to the middle of the title-section */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for the element's own dimensions */
+            width: 100%; /* Make subtitles span the full width */
+            padding: 0 20px; /* Add some padding on the sides */
+        }
+
+        .title-section .subtitles div {
+            flex: 1;
+            text-align: center;
+            color: white;
+            display: flex; /* Use flexbox for vertical alignment */
+            flex-direction: column; /* Stack content vertically */
+            justify-content: center; /* Center content vertically */
+            background-color: rgba(128, 128, 128, 0.5); /* Gray color with 50% transparency */
+            padding: 20px; /* Add padding inside the boxes */
+            border-radius: 10px; /* Optional: Add rounded corners */
+            margin: 5px; /* Add spacing between the boxes */
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        .title-section .subtitles div h2 {
+            font-size: 2.5rem; /* Increase the font size for the headings */
+            font-weight: bold;
+        }
+
+        .title-section .subtitles div p {
+            font-size: 1.8rem; /* Increase the font size for the paragraphs */
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .title-section .subtitles {
+                flex-direction: column; /* Stack the left and right divs vertically */
+                justify-content: center; /* Center the stacked divs */
+                align-items: center; /* Center the content horizontally */
+                gap: 20px; /* Add spacing between the divs */
+            }
+
+            .title-section .subtitles div {
+                width: 90%; /* Make the divs take up most of the width on mobile */
+                margin: 0; /* Remove extra margins */
+                position: relative; /* Position relative for absolute positioning of child elements */  
+            }
+
+            .icon-container {
+                flex-direction: column; /* Stack the icon-box divs vertically */
+                align-items: center; /* Center the content horizontally */
+                gap: 20px; /* Add spacing between the icon-box divs */
+            }
+
+            .icon-box {
+                width: 90%; /* Make each icon-box take up most of the width */
+                margin: 0; /* Remove extra margins */
+            }
+
+            .icon-box img {
+                width: 45%; /* Adjust icon size for mobile */
+                height: auto;
+            }
+
+            .icon-box p {
+                font-size: 1rem; /* Adjust text size for mobile */
+            }
+        }
+
+        /* Background images container */
+        .background-images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Match the height of the title section */
+            z-index: -1; /* Place behind the text */
+        }
+
+        .background-images img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; /* Ensure images cover the entire section */
+            object-fit: cover;
+            opacity: 0;
+            filter: blur(5px); /* Apply blur effect */
+            transition: opacity 2s ease-in-out; /* Smooth fade effect */
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            margin: 0; /* Remove default margin for full-page layout */
+        }
+
+        /* Keyframes for fading images */
+        @keyframes fade {
+            0%, 25% { opacity: 1; } /* Image is fully visible for 25% of the time */
+            33%, 100% { opacity: 0; } /* Image fades out and stays hidden */
+        }
+
+        /* Apply animation to each image */
+        .background-images img:nth-child(1) {
+            animation: fade 48s infinite;
+        }
+
+        .background-images img:nth-child(2) {
+            animation: fade 48s infinite 12s; /* Start after 12 seconds */
+        }
+
+        .background-images img:nth-child(3) {
+            animation: fade 48s infinite 24s; /* Start after 24 seconds */
+        }
+
+        .background-images img:nth-child(4) {
+            animation: fade 48s infinite 36s; /* Start after 36 seconds */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-nav ul li {
+            margin: 5px 0;
+        }
+
+        .footer-nav ul li a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .footer-nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact p {
+            margin: 5px 0;
+        }
+
+        .footer-social a {
+            color: #FFD700;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer-social a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Header Menu Styles */
+        .header-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transform: translateY(-100%); /* Initially hide the header */
+            transition: transform 0.3s ease-in-out; /* Smooth transition */
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #333;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-bottom: 1px solid #444;
+        }
+
+        .mobile-menu a:hover {
+            background-color: #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-menu .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+
+        .icon-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgba(128, 128, 128, 0.5); /* Gray color with 50% transparency */
+            width: 100%; /* Take the full width of the container */
+            padding: 0;
+            position: absolute; /* Position it relative to the parent */
+            bottom: 0; /* Align it to the bottom of the parent */
+        }
+
+        .icon-box {
+            text-align: center;
+            flex: 1; /* Allow icons to adapt to the available space */
+            margin: 0 10px;
+        }
+
+        .icon-box img {
+            width: 100px; /* Default size for desktop */
+            margin:10px;
+            height: auto;
+        }
+
+        .icon-box p {
+            font-size: 1rem;
+            color: white;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .icon-container {
+                flex-wrap: wrap; /* Allow icons to wrap to the next line */
+            }
+
+            .icon-box {
+                flex: 0 0 50%; /* Each icon takes half the width on mobile */
+                margin-bottom: 20px;
+            }
+
+            .icon-box img {
+                margin:10px;
+                width: 45%; /* Icons take half the width of their container */
+            }
+
+            .icon-box p {
+                font-size: 0.9rem; /* Adjust text size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Menu -->
+    <header>
+        <div class="header-menu">
+            <a href="#" class="logo">Tele-Taxi</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+        </div>
+    </header>
+
+    <!-- Title Section -->
+    <div class="title-section">
+        <!-- Background images -->
+        <div class="background-images">
+            <img src="./img/title/1.jpg" alt="Background 1">
+            <img src="./img/title/2.jpg" alt="Background 2">
+            <img src="./img/title/3.jpg" alt="Background 3">
+            <img src="./img/title/4.jpg" alt="Background 4">
+        </div>
+
+        <!-- Title content -->
+        <h1>Tele-Taxi</h1>
+        <h3>Tu servicio de confianza</h3>
+        <div class="subtitles">
+            <div class="left">
+                <h2>Tavernes de la Valldigna</h2>
+                <p>639 654 744</p>
+            </div>
+            <div class="right">
+                <h2>Cullera</h2>
+                <p>+34 600 000 002</p>
+            </div>
+        </div>
+
+        <!-- Icon Container -->
+        <div class="icon-container">
+            <div class="icon-box">
+                <img src="./img/icon/24.png" alt="Icono 24h" width="50" height="50">
+                <p>Servicio 24 horas</p>
+            </div>
+            <div class="icon-box">
+                <img src="./img/icon/ave.png" alt="Icono AVE" width="50" height="50">
+                <p>Servicios AVE</p>
+            </div>
+            <div class="icon-box">
+                <img src="./img/icon/puerto.png" alt="Icono Puerto" width="50" height="50">
+                <p>Servicios Puerto</p>
+            </div>
+            <div class="icon-box">
+                <img src="./img/icon/aeropuerto.png" alt="Icono Aeropuerto" width="50" height="50">
+                <p>Servicios Aeropuerto</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+
+            <!-- Contact Information -->
+            <div class="footer-contact">
+                <h3>Contactanos</h3>
+                <p>Phone: 639 654 744</p>
+                <p>Email: teletaxi@hotmail.es</p>
+                <p>Dirección: Tavernes de la Valldigna, España</p>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 Tele-Taxi. All rights reserved.</p>
+            <a href="https://www.flaticon.es/iconos-gratis" title="iconos">Iconos creados por Freepik - Flaticon</a>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+    </script>
+    <script>
+        let lastScrollY = window.scrollY;
+        const headerMenu = document.querySelector('.header-menu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY) {
+                // Scrolling down
+                headerMenu.style.transform = 'translateY(0)'; // Show the header
+            } else {
+                // Scrolling up
+                headerMenu.style.transform = 'translateY(-100%)'; // Hide the header
+            }
+            lastScrollY = window.scrollY;
+        });
+    </script>
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
